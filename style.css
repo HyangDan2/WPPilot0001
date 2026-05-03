@@ -64,3 +64,8 @@ footer {
     padding: 20px;
     background: #111;
 }
+
+.hero p {
+    white-space: pre-line;
+    line-height: 1.6;
+}
