@@ -74,3 +74,12 @@ footer {
     white-space: pre-line;
     line-height: 1.6;
 }
+
+.about {
+    text-align: center;
+}
+
+.about-logo {
+    width: 400px;
+    margin: 20px 0;
+}
