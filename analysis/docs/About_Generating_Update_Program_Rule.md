@@ -124,8 +124,12 @@ The updater must extract:
 - profit before tax
 - profit attributable to owners
 - EPS
+- BPS
+- PER
+- PBR
 - ROE
 - operating margin
+- debt ratio
 - total assets
 - total equity
 - equity ratio
@@ -133,6 +137,12 @@ The updater must extract:
 - next-year company forecast, if available
 
 All units must be explicit. For IHI, use `JPY millions` for official financial statement values unless the source uses another unit.
+
+The financial analysis text must be generated as three short paragraphs in each language:
+
+1. earnings quality and forecast momentum
+2. valuation using PER, PBR, EPS, and BPS
+3. balance-sheet risk using equity ratio, debt ratio, cash flow, and order conversion
 
 ## Peer Group Rule
 
@@ -146,6 +156,12 @@ The default peer group must include:
 - Rheinmetall `RHM.DE`
 
 The updater may add RTX, Northrop Grumman, BAE Systems, Thales, Leonardo, LIG Nex1, Hyundai Rotem, or Komatsu when the analysis objective requires broader comparison.
+
+Each peer must include a rich `one_year_context` field. This field must be written as three short paragraphs in `ko/en/ja` when multilingual peer analysis is supported, or as three English paragraphs if the current schema remains single-string. The three paragraphs should cover:
+
+1. business role and why the peer matters to IHI
+2. valuation or earnings comparison
+3. read-through to IHI's share price or sector narrative
 
 ## Segment Sector Map Rule
 
@@ -188,6 +204,12 @@ Default ticker candidates by segment:
 - Maritime / Shipbuilding / Special Vessels: `7011.T`, `7012.T`, `329180.KS`, `042660.KS`, `010140.KS`, `BA.L`, `LDO.MI`
 
 The updater must explain whether each segment is a direct IHI catalyst, an adjacent macro/industrial comparison, or only a reference sector. This distinction is important because defense news, aero-engine cost news, nuclear/SMR news, and shipbuilding news do not affect IHI with the same intensity.
+
+For every segment, `ihi_linkage.ko/en/ja` must be written as approximately three paragraphs:
+
+1. IHI business exposure and strategic relevance
+2. global peer set and macro/industry drivers
+3. how that segment links to IHI's stock price, including whether the link is direct or indirect
 
 ## News and Price Linkage Rule
 
@@ -237,6 +259,14 @@ Preferred indicators:
 
 If full calculation data is not available, the updater must use observed price zones and label the result as chart-structure analysis rather than indicator calculation.
 
+`technical_view.trend_state.ko/en/ja` must be written as approximately three paragraphs:
+
+1. current trend structure and recent price movement
+2. support, resistance, and breakout/invalidation zones
+3. volume, momentum, and confirmation conditions
+
+`technical_view.risk_state.ko/en/ja` may be shorter, but must clearly state the invalidation price zone and the next upside confirmation zone.
+
 ## Trading Scenario Rule
 
 The updater must produce three scenarios:
@@ -252,6 +282,12 @@ Each scenario must include:
 - fundamental or technical basis
 
 Never present scenarios as guaranteed outcomes. Use research wording, not instruction wording.
+
+Each scenario body must be written as approximately three paragraphs:
+
+1. main setup and price or fundamental trigger
+2. execution approach, such as staged entry, confirmation, or position reduction
+3. risk condition and invalidation logic
 
 ## GitHub Pages Rule
 

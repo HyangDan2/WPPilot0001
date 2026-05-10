@@ -1,4 +1,4 @@
-﻿{
+{
   "schema_version": "1.0.1",
   "generated_at": "2026-05-10T16:11:57+09:00",
   "as_of": {
@@ -17,7 +17,13 @@
     "security_code": "7013",
     "exchange": "Tokyo Stock Exchange Prime Market",
     "currency": "JPY",
-    "business_tags": ["aero engines", "space", "defense", "energy systems", "social infrastructure"],
+    "business_tags": [
+      "aero engines",
+      "space",
+      "defense",
+      "energy systems",
+      "social infrastructure"
+    ],
     "identity_note": {
       "ko": "TSE 7013은 IHI Corporation이며, Mitsubishi Heavy Industries는 TSE 7011이다.",
       "en": "TSE 7013 is IHI Corporation; Mitsubishi Heavy Industries is TSE 7011.",
@@ -41,38 +47,147 @@
     }
   },
   "recent_prices": [
-    { "date": "2026-03-04", "open": 3998, "high": 4067, "low": 3753, "close": 3902, "volume": 28182200 },
-    { "date": "2026-03-10", "open": 3791, "high": 3972, "low": 3731, "close": 3835, "volume": 21950000 },
-    { "date": "2026-03-18", "open": 3851, "high": 3930, "low": 3772, "close": 3930, "volume": 11733900 },
-    { "date": "2026-03-24", "open": 3559, "high": 3572, "low": 3343, "close": 3419, "volume": 16531000 },
-    { "date": "2026-03-30", "open": 3288, "high": 3332, "low": 3226, "close": 3308, "volume": 13829500 },
-    { "date": "2026-04-24", "open": 3071, "high": 3075, "low": 2969, "close": 2995, "volume": 14535100 },
-    { "date": "2026-04-27", "open": 2924, "high": 2941, "low": 2811, "close": 2901, "volume": 21920300 },
-    { "date": "2026-04-30", "open": 2962, "high": 2988, "low": 2832.5, "close": 2853, "volume": 21212200 },
-    { "date": "2026-05-07", "open": 2880, "high": 3068, "low": 2838, "close": 3045, "volume": 25106600 },
-    { "date": "2026-05-08", "open": 3098, "high": 3323, "low": 3001, "close": 3059, "volume": 69373000 }
+    {
+      "date": "2026-03-04",
+      "open": 3998,
+      "high": 4067,
+      "low": 3753,
+      "close": 3902,
+      "volume": 28182200
+    },
+    {
+      "date": "2026-03-10",
+      "open": 3791,
+      "high": 3972,
+      "low": 3731,
+      "close": 3835,
+      "volume": 21950000
+    },
+    {
+      "date": "2026-03-18",
+      "open": 3851,
+      "high": 3930,
+      "low": 3772,
+      "close": 3930,
+      "volume": 11733900
+    },
+    {
+      "date": "2026-03-24",
+      "open": 3559,
+      "high": 3572,
+      "low": 3343,
+      "close": 3419,
+      "volume": 16531000
+    },
+    {
+      "date": "2026-03-30",
+      "open": 3288,
+      "high": 3332,
+      "low": 3226,
+      "close": 3308,
+      "volume": 13829500
+    },
+    {
+      "date": "2026-04-24",
+      "open": 3071,
+      "high": 3075,
+      "low": 2969,
+      "close": 2995,
+      "volume": 14535100
+    },
+    {
+      "date": "2026-04-27",
+      "open": 2924,
+      "high": 2941,
+      "low": 2811,
+      "close": 2901,
+      "volume": 21920300
+    },
+    {
+      "date": "2026-04-30",
+      "open": 2962,
+      "high": 2988,
+      "low": 2832.5,
+      "close": 2853,
+      "volume": 21212200
+    },
+    {
+      "date": "2026-05-07",
+      "open": 2880,
+      "high": 3068,
+      "low": 2838,
+      "close": 3045,
+      "volume": 25106600
+    },
+    {
+      "date": "2026-05-08",
+      "open": 3098,
+      "high": 3323,
+      "low": 3001,
+      "close": 3059,
+      "volume": 69373000
+    }
   ],
   "monthly_prices": [
-    { "month": "2025-05", "close": 1998 },
-    { "month": "2025-06", "close": 2234 },
-    { "month": "2025-07", "close": 2426 },
-    { "month": "2025-08", "close": 2210 },
-    { "month": "2025-09", "close": 2760 },
-    { "month": "2025-10", "close": 3215 },
-    { "month": "2025-11", "close": 2786 },
-    { "month": "2025-12", "close": 2754 },
-    { "month": "2026-01", "close": 3568 },
-    { "month": "2026-02", "close": 4303 },
-    { "month": "2026-03", "close": 3138 },
-    { "month": "2026-04", "close": 2853 },
-    { "month": "2026-05", "close": 3059 }
+    {
+      "month": "2025-05",
+      "close": 1998
+    },
+    {
+      "month": "2025-06",
+      "close": 2234
+    },
+    {
+      "month": "2025-07",
+      "close": 2426
+    },
+    {
+      "month": "2025-08",
+      "close": 2210
+    },
+    {
+      "month": "2025-09",
+      "close": 2760
+    },
+    {
+      "month": "2025-10",
+      "close": 3215
+    },
+    {
+      "month": "2025-11",
+      "close": 2786
+    },
+    {
+      "month": "2025-12",
+      "close": 2754
+    },
+    {
+      "month": "2026-01",
+      "close": 3568
+    },
+    {
+      "month": "2026-02",
+      "close": 4303
+    },
+    {
+      "month": "2026-03",
+      "close": 3138
+    },
+    {
+      "month": "2026-04",
+      "close": 2853
+    },
+    {
+      "month": "2026-05",
+      "close": 3059
+    }
   ],
   "financials": {
     "source": "IHI Consolidated Financial Results FY ended March 31, 2026",
     "fiscal_year": "FY2025 ended 2026-03-31",
     "unit": "JPY millions",
     "revenue": 1643402,
-    "revenue_yoy_percent": 1.0,
+    "revenue_yoy_percent": 1,
     "operating_profit": 165534,
     "operating_profit_yoy_percent": 15.3,
     "profit_before_tax": 185490,
@@ -91,157 +206,469 @@
       "revenue": 1830000,
       "revenue_yoy_percent": 11.4,
       "operating_profit": 240000,
-      "operating_profit_yoy_percent": 45.0,
+      "operating_profit_yoy_percent": 45,
       "profit_attributable_to_owners": 165000,
       "profit_attributable_yoy_percent": 2.5,
       "eps_yen": 155.09,
       "orders": 1760000
     },
     "analysis": {
-      "ko": "FY2025는 매출 성장률은 낮았지만 영업이익률과 ROE가 개선됐다. 회사는 FY2026에 민항 엔진과 방산 사업 성장을 바탕으로 매출 11.4%, 영업이익 45.0% 증가를 제시했다.",
-      "en": "FY2025 revenue growth was modest, but operating margin and ROE improved. Management guides FY2026 revenue up 11.4% and operating profit up 45.0%, driven by civil aero engines and defense.",
-      "ja": "FY2025は売上成長こそ小幅だったが、営業利益率とROEは改善した。会社は民間航空エンジンと防衛事業を背景に、FY2026の売上高11.4%増、営業利益45.0%増を見込む。"
-    }
+      "ko": "FY2025는 매출 성장률 자체는 1.0%로 낮았지만, 영업이익 1,655억 엔, 영업이익률 10.1%, ROE 28.4%를 기록하면서 수익성의 회복이 더 중요한 포인트로 나타났다. 특히 FY2026 회사 전망은 매출 1조 8,300억 엔, 영업이익 2,400억 엔으로 제시되어, 시장은 매출보다 이익 레버리지의 지속성을 더 크게 볼 가능성이 있다.\n\n밸류에이션 측면에서는 PER 26.68배, PBR 4.06배로 이미 방산/항공우주 리레이팅이 상당 부분 반영된 상태다. EPS 151.88엔과 BPS 753.4엔을 기준으로 보면, 현재 주가는 순자산가치보다는 미래 이익 성장과 방산/항공엔진 프리미엄을 가격에 담고 있다. 따라서 단순 저평가주라기보다는 실적 확인형 성장주에 가깝다.\n\n재무 안정성에서는 자기자본비율 26.9%, 추정 부채비율 256.3%를 함께 봐야 한다. 중공업 기업 특성상 운전자본, 장기 프로젝트, 설비투자 부담이 존재하므로, 수주 증가가 현금흐름으로 전환되는지와 FY2026 영업현금흐름 개선 여부가 다음 확인 지점이다.",
+      "en": "FY2025 revenue growth was modest at 1.0%, but profitability mattered more: operating profit reached JPY 165.5B, operating margin was 10.1%, and ROE was 28.4%. Management's FY2026 guidance points to JPY 1.83T revenue and JPY 240B operating profit, so the market is likely to focus more on earnings leverage than top-line growth alone.\n\nOn valuation, PER of 26.68x and PBR of 4.06x already embed a meaningful defense and aerospace rerating. Based on EPS of JPY 151.88 and BPS of JPY 753.4, the share price reflects future profit growth and segment premium more than book-value support. IHI should therefore be treated as an execution-confirmation growth stock, not a simple value stock.\n\nFinancial stability should be read together with the 26.9% equity ratio and an estimated 256.3% debt ratio. As a heavy-industry company, IHI carries working-capital, long-cycle project and capex burdens, so the next key checkpoint is whether orders convert into cash flow and whether FY2026 operating cash flow improves.",
+      "ja": "FY2025は売上成長率こそ1.0%と小幅だったが、営業利益1,655億円、営業利益率10.1%、ROE28.4%となり、収益性の回復がより重要なポイントとなった。FY2026会社予想は売上高1兆8,300億円、営業利益2,400億円であり、市場は売上成長以上に利益レバレッジの持続性を重視する可能性が高い。\n\nバリュエーション面ではPER26.68倍、PBR4.06倍と、防衛・航空宇宙の再評価が相当程度織り込まれている。EPS151.88円、BPS753.4円を基準にすると、株価は純資産価値よりも将来利益成長と事業プレミアムを反映している。したがって、単純な割安株ではなく、実行力確認型の成長株として見るべきである。\n\n財務安定性は自己資本比率26.9%、推定負債比率256.3%と併せて確認する必要がある。重工業企業として運転資本、長期プロジェクト、設備投資負担があるため、受注がキャッシュフローへ転換するか、FY2026の営業キャッシュフローが改善するかが次の確認点となる。"
+    },
+    "per": 26.68,
+    "pbr": 4.06,
+    "bps_yen": 753.4,
+    "debt_ratio_percent": 256.3
   },
   "segment_sector_map": [
     {
       "segment_id": "defense_space",
-      "segment_name": { "ko": "방산 / 우주", "en": "Defense / Space", "ja": "防衛 / 宇宙" },
+      "segment_name": {
+        "ko": "방산 / 우주",
+        "en": "Defense / Space",
+        "ja": "防衛 / 宇宙"
+      },
       "ihi_relevance": "direct",
       "ihi_linkage": {
-        "ko": "IHI의 항공엔진, 방산 장비, 우주 관련 제조 역량이 직접 연결되는 핵심 섹터다.",
-        "en": "Core direct exposure through aero engines, defense equipment and space-related manufacturing capabilities.",
-        "ja": "航空エンジン、防衛装備、宇宙関連製造能力を通じてIHIに直接つながる中核セクター。"
+        "ko": "IHI의 방산/우주 섹터 노출은 일본 방위비 확대와 직접 연결된다. 일본 정부의 장기 방위력 강화 흐름은 7013.T, 7011.T, 7012.T 같은 일본 중공업 종목의 구조적 프리미엄을 지지한다.\n\n글로벌 비교군으로는 Lockheed Martin, RTX, Northrop Grumman, Rheinmetall, BAE Systems, Thales, Hanwha Aerospace를 함께 봐야 한다. 이들은 미사일 방어, 항공우주, 장거리 타격, 탄약 생산능력이라는 공통 테마를 공유한다.\n\n다만 방산 뉴스가 곧바로 IHI 실적에 반영되는 것은 아니다. 수주가 생산, 납품, 매출 인식으로 이어지는 시간차가 있으므로, 주가는 기대감으로 먼저 움직이고 실적은 나중에 검증되는 구조다.",
+        "en": "IHI's defense and space exposure is directly linked to Japan's defense spending expansion. The government's long-term defense buildup supports the structural premium of Japanese heavy-industry names such as 7013.T, 7011.T and 7012.T.\n\nGlobal peers include Lockheed Martin, RTX, Northrop Grumman, Rheinmetall, BAE Systems, Thales and Hanwha Aerospace. They share themes such as missile defense, aerospace, long-range strike capability and ammunition production capacity.\n\nDefense headlines do not immediately become IHI earnings. Orders must convert into production, delivery and revenue recognition, so the stock often moves first on expectations while earnings confirmation comes later.",
+        "ja": "IHIの防衛・宇宙セクターへのエクスポージャーは、日本の防衛費拡大と直接つながっている。政府の長期的な防衛力強化は、7013.T、7011.T、7012.Tのような日本重工業株の構造的プレミアムを支える。\n\nグローバル比較対象としては、Lockheed Martin、RTX、Northrop Grumman、Rheinmetall、BAE Systems、Thales、Hanwha Aerospaceを併せて見る必要がある。ミサイル防衛、航空宇宙、長距離打撃、弾薬生産能力という共通テーマを持つためである。\n\nただし防衛ニュースが直ちにIHIの業績へ反映されるわけではない。受注が生産、納入、売上認識へ転換するまで時間差があるため、株価は期待で先行し、業績確認は後から行われる構造である。"
       },
-      "tickers": ["7013.T", "7011.T", "7012.T", "LMT", "RTX", "NOC", "RHM.DE", "BA.L", "HO.PA", "012450.KS"],
-      "drivers": ["Japan defense budget", "missile defense", "space systems", "NATO rearmament"],
-      "risk_factors": ["budget timing", "delivery delay", "margin pressure"],
+      "tickers": [
+        "7013.T",
+        "7011.T",
+        "7012.T",
+        "LMT",
+        "RTX",
+        "NOC",
+        "RHM.DE",
+        "BA.L",
+        "HO.PA",
+        "012450.KS"
+      ],
+      "drivers": [
+        "Japan defense budget",
+        "missile defense",
+        "space systems",
+        "NATO rearmament"
+      ],
+      "risk_factors": [
+        "budget timing",
+        "delivery delay",
+        "margin pressure"
+      ],
       "price_linkage": {
-        "ko": "일본 방위비 확대와 글로벌 재무장 뉴스는 IHI의 장기 프리미엄을 지지하지만, 단기 주가는 수주가 실제 매출과 이익으로 전환되는 속도에 민감하다.",
-        "en": "Japan defense spending and global rearmament support IHI's long-term premium, but short-term price action is sensitive to backlog-to-revenue conversion.",
-        "ja": "日本の防衛費拡大と世界的な再軍備はIHIの長期プレミアムを支えるが、短期株価は受注残から売上・利益への転換速度に敏感である。"
+        "ko": "",
+        "en": "",
+        "ja": ""
       }
     },
     {
       "segment_id": "aero_engines",
-      "segment_name": { "ko": "항공엔진 / 항공부품", "en": "Aero Engines / Aviation Components", "ja": "航空エンジン / 航空部品" },
+      "segment_name": {
+        "ko": "항공엔진 / 항공부품",
+        "en": "Aero Engines / Aviation Components",
+        "ja": "航空エンジン / 航空部品"
+      },
       "ihi_relevance": "direct",
       "ihi_linkage": {
-        "ko": "IHI의 민항 엔진 및 엔진 부품 사업은 실적 가이던스와 마진 개선의 핵심 축이다.",
-        "en": "Civil aero engines and engine components are central to IHI's guidance and margin recovery story.",
-        "ja": "民間航空エンジンとエンジン部品は、IHIの業績見通しと利益率回復の中心軸である。"
+        "ko": "항공엔진은 IHI의 실적 레버리지에서 가장 중요한 축 중 하나다. 민항 수요 회복, 엔진 애프터마켓, 정비 수요 증가는 매출과 마진을 동시에 밀어 올릴 수 있다.\n\n이 섹터는 RTX, GE Aerospace, Safran, Rolls-Royce, MTU Aero Engines와 연결해서 봐야 한다. 글로벌 항공기 생산률과 엔진 정비 사이클이 좋아지면 IHI의 관련 사업에도 긍정적이다.\n\n반대로 엔진 품질 이슈, 점검 비용, 공급망 병목은 방산 호재를 상쇄할 수 있다. 따라서 IHI는 방산 기대감뿐 아니라 항공엔진 비용 정상화 여부까지 함께 확인해야 한다.",
+        "en": "Aero engines are one of the most important earnings-leverage drivers for IHI. Civil aviation recovery, engine aftermarket demand and maintenance activity can lift both revenue and margins.\n\nThis segment should be compared with RTX, GE Aerospace, Safran, Rolls-Royce and MTU Aero Engines. Improving aircraft production rates and engine maintenance cycles are positive read-throughs for IHI.\n\nConversely, engine quality issues, inspection costs and supply-chain bottlenecks can offset defense optimism. IHI therefore needs to be assessed through both defense expectations and aero-engine cost normalization.",
+        "ja": "航空エンジンはIHIの利益レバレッジにおいて最も重要な軸の一つである。民間航空需要の回復、エンジンアフターマーケット、整備需要の増加は、売上と利益率を同時に押し上げ得る。\n\nこのセグメントはRTX、GE Aerospace、Safran、Rolls-Royce、MTU Aero Enginesと比較して見るべきである。航空機生産率とエンジン整備サイクルが改善すれば、IHIにも好影響が及ぶ。\n\n一方で、エンジン品質問題、点検費用、供給網の詰まりは防衛関連の好材料を相殺し得る。したがってIHIは防衛期待だけでなく、航空エンジン費用の正常化も確認する必要がある。"
       },
-      "tickers": ["7013.T", "RTX", "GE", "SAF.PA", "RR.L", "MTX.DE", "7012.T", "012450.KS"],
-      "drivers": ["air traffic recovery", "engine aftermarket", "maintenance cost normalization", "aircraft production rate"],
-      "risk_factors": ["engine inspection cost", "supply chain bottleneck", "quality issue"],
+      "tickers": [
+        "7013.T",
+        "RTX",
+        "GE",
+        "SAF.PA",
+        "RR.L",
+        "MTX.DE",
+        "7012.T",
+        "012450.KS"
+      ],
+      "drivers": [
+        "air traffic recovery",
+        "engine aftermarket",
+        "maintenance cost normalization",
+        "aircraft production rate"
+      ],
+      "risk_factors": [
+        "engine inspection cost",
+        "supply chain bottleneck",
+        "quality issue"
+      ],
       "price_linkage": {
-        "ko": "항공 수요 회복은 매출 성장에 우호적이지만, 엔진 점검 비용과 공급망 이슈가 발생하면 방산 호재를 상쇄할 수 있다.",
-        "en": "Air traffic recovery supports revenue growth, but engine inspection costs and supply-chain issues can offset defense-driven optimism.",
-        "ja": "航空需要の回復は売上成長を支えるが、エンジン点検費用や供給網問題が発生すると防衛関連の好材料を相殺し得る。"
+        "ko": "",
+        "en": "",
+        "ja": ""
       }
     },
     {
       "segment_id": "energy_nuclear_smr",
-      "segment_name": { "ko": "에너지 / 원전 / SMR", "en": "Energy / Nuclear / SMR", "ja": "エネルギー / 原子力 / SMR" },
+      "segment_name": {
+        "ko": "에너지 / 원전 / SMR",
+        "en": "Energy / Nuclear / SMR",
+        "ja": "エネルギー / 原子力 / SMR"
+      },
       "ihi_relevance": "adjacent",
       "ihi_linkage": {
-        "ko": "IHI는 에너지 시스템과 플랜트 역량을 통해 일본 에너지 안보와 원전/SMR 밸류체인에 간접적으로 연결된다.",
-        "en": "IHI is linked to Japan's energy security and nuclear/SMR value chain through energy systems and plant engineering capabilities.",
-        "ja": "IHIはエネルギーシステムとプラント技術を通じて、日本のエネルギー安全保障および原子力・SMRバリューチェーンに関係する。"
+        "ko": "에너지/원전/SMR은 IHI에 직접 방산만큼 강한 모멘텀은 아니지만, 일본 에너지 안보와 중공업 리레이팅을 설명하는 중요한 주변 섹터다.\n\nMHI, Hitachi, Siemens Energy, GE Vernova, Doosan Enerbility, BWX Technologies 같은 기업과 함께 보면 원전 재가동, 전력망 안정화, 차세대 원자로 투자 흐름을 읽을 수 있다.\n\n이 섹터는 IHI의 단기 주가 촉매라기보다 장기 멀티플 방어 논리로 작동한다. 정책 지연이나 프로젝트 비용 초과가 발생하면 기대감이 낮아질 수 있으므로, 뉴스의 성격을 직접 촉매와 주변 테마로 나눠야 한다.",
+        "en": "Energy, nuclear and SMR are not as direct a catalyst for IHI as defense, but they are important adjacent sectors for understanding Japan energy security and heavy-industry rerating.\n\nComparing IHI with MHI, Hitachi, Siemens Energy, GE Vernova, Doosan Enerbility and BWX Technologies helps read nuclear restart, grid stability and next-generation reactor investment trends.\n\nFor IHI, this segment works more as long-term multiple support than as a short-term catalyst. Policy delays or project cost overruns can reduce enthusiasm, so news should be separated into direct catalysts and adjacent themes.",
+        "ja": "エネルギー、原子力、SMRは防衛ほどIHIに直接的な材料ではないが、日本のエネルギー安全保障と重工業株の再評価を理解する上で重要な周辺セクターである。\n\nMHI、Hitachi、Siemens Energy、GE Vernova、Doosan Enerbility、BWX Technologiesと比較することで、原発再稼働、送電網安定化、次世代原子炉投資の流れを読み取れる。\n\nIHIにとってこのセクターは短期材料というより長期的な倍率下支えとして機能する。政策遅延やプロジェクト費用超過があれば期待は低下するため、ニュースを直接材料と周辺テーマに分ける必要がある。"
       },
-      "tickers": ["7013.T", "7011.T", "6501.T", "ENR.DE", "GEV", "034020.KS", "BWXT", "CCJ"],
-      "drivers": ["energy security", "nuclear restart", "SMR investment", "grid stability"],
-      "risk_factors": ["regulation delay", "project cost overrun", "policy reversal"],
+      "tickers": [
+        "7013.T",
+        "7011.T",
+        "6501.T",
+        "ENR.DE",
+        "GEV",
+        "034020.KS",
+        "BWXT",
+        "CCJ"
+      ],
+      "drivers": [
+        "energy security",
+        "nuclear restart",
+        "SMR investment",
+        "grid stability"
+      ],
+      "risk_factors": [
+        "regulation delay",
+        "project cost overrun",
+        "policy reversal"
+      ],
       "price_linkage": {
-        "ko": "에너지 안보와 원전 재가동 뉴스는 중공업 멀티플을 지지하지만, IHI에는 방산/항공보다 간접적인 비교 섹터로 보는 편이 적절하다.",
-        "en": "Energy security and nuclear restart headlines support heavy-industry multiples, but this is more of an adjacent comparison sector for IHI than defense or aero engines.",
-        "ja": "エネルギー安全保障と原発再稼働のニュースは重工業株の倍率を支えるが、IHIにとっては防衛・航空エンジンより間接的な比較セクターである。"
+        "ko": "",
+        "en": "",
+        "ja": ""
       }
     },
     {
       "segment_id": "industrial_machinery_turbomachinery",
-      "segment_name": { "ko": "산업기계 / 터보머신", "en": "Industrial Machinery / Turbomachinery", "ja": "産業機械 / ターボ機械" },
+      "segment_name": {
+        "ko": "산업기계 / 터보머신",
+        "en": "Industrial Machinery / Turbomachinery",
+        "ja": "産業機械 / ターボ機械"
+      },
       "ihi_relevance": "direct_adjacent",
       "ihi_linkage": {
-        "ko": "압축기, 터빈, 산업 설비는 IHI의 중공업 정체성과 경기 민감도를 보여주는 사업 축이다.",
-        "en": "Compressors, turbines and industrial systems define IHI's heavy-industry identity and cyclical sensitivity.",
-        "ja": "圧縮機、タービン、産業設備はIHIの重工業としての性格と景気感応度を示す事業軸である。"
+        "ko": "산업기계와 터보머신은 IHI의 전통적 중공업 성격을 보여준다. 이 영역은 방산보다 경기와 설비투자 사이클에 민감하며, 글로벌 제조업 PMI, 원자재 프로젝트, LNG/화학 플랜트 투자 흐름의 영향을 받는다.\n\nMHI, Kawasaki, Ebara, Komatsu, Hitachi, Siemens, Caterpillar를 비교군으로 두면 경기 민감 중공업의 흐름을 읽기 좋다. 방산주가 정책과 지정학에 반응한다면, 이 섹터는 산업 주문과 설비투자 지표에 반응한다.\n\nIHI 분석에서는 이 영역을 실적 안정성과 경기 민감 리스크를 동시에 보여주는 축으로 써야 한다. 방산/항공이 성장 프리미엄을 만든다면, 산업기계는 경기 둔화 시 밸류에이션 부담을 키울 수 있다.",
+        "en": "Industrial machinery and turbomachinery represent IHI's traditional heavy-industry identity. This area is more sensitive to capex and industrial cycles than defense, and is influenced by global manufacturing PMI, commodity projects and LNG/chemical plant investment.\n\nMHI, Kawasaki, Ebara, Komatsu, Hitachi, Siemens and Caterpillar are useful peers for reading cyclical heavy-industry trends. Defense stocks react to policy and geopolitics; this segment reacts to industrial orders and capex indicators.\n\nFor IHI, this segment should be used to read both earnings stability and cyclical risk. If defense and aerospace create growth premium, industrial machinery can increase valuation pressure during a manufacturing slowdown.",
+        "ja": "産業機械とターボ機械はIHIの伝統的な重工業としての性格を示す。防衛よりも景気と設備投資サイクルに敏感であり、世界の製造業PMI、資源プロジェクト、LNG・化学プラント投資の影響を受ける。\n\nMHI、Kawasaki、Ebara、Komatsu、Hitachi、Siemens、Caterpillarを比較対象にすると、景気敏感型重工業の流れを読みやすい。防衛株が政策と地政学に反応する一方、このセグメントは産業受注と設備投資指標に反応する。\n\nIHI分析では、この領域を収益安定性と景気敏感リスクの両方を示す軸として扱うべきである。防衛・航空が成長プレミアムを作るなら、産業機械は製造業減速時にバリュエーション負担を高め得る。"
       },
-      "tickers": ["7013.T", "7011.T", "7012.T", "6361.T", "6301.T", "6501.T", "SIE.DE", "CAT"],
-      "drivers": ["capex cycle", "factory automation", "commodity projects", "LNG and chemical plants"],
-      "risk_factors": ["cyclical order slowdown", "raw material cost", "capex delay"],
+      "tickers": [
+        "7013.T",
+        "7011.T",
+        "7012.T",
+        "6361.T",
+        "6301.T",
+        "6501.T",
+        "SIE.DE",
+        "CAT"
+      ],
+      "drivers": [
+        "capex cycle",
+        "factory automation",
+        "commodity projects",
+        "LNG and chemical plants"
+      ],
+      "risk_factors": [
+        "cyclical order slowdown",
+        "raw material cost",
+        "capex delay"
+      ],
       "price_linkage": {
-        "ko": "이 섹터는 방산보다 경기와 설비투자에 민감하다. 글로벌 제조업 PMI와 원자재 프로젝트 사이클을 함께 봐야 한다.",
-        "en": "This segment is more sensitive to capex and industrial cycles than defense. Global manufacturing PMI and commodity-project cycles matter.",
-        "ja": "このセグメントは防衛よりも設備投資と景気循環に敏感である。世界の製造業PMIと資源プロジェクトのサイクルを併せて確認する必要がある。"
+        "ko": "",
+        "en": "",
+        "ja": ""
       }
     },
     {
       "segment_id": "infrastructure_mobility",
-      "segment_name": { "ko": "사회 인프라 / 교통 시스템", "en": "Infrastructure / Mobility Systems", "ja": "社会インフラ / 交通システム" },
+      "segment_name": {
+        "ko": "사회 인프라 / 교통 시스템",
+        "en": "Infrastructure / Mobility Systems",
+        "ja": "社会インフラ / 交通システム"
+      },
       "ihi_relevance": "adjacent",
       "ihi_linkage": {
-        "ko": "교량, 물류, 교통 시스템은 장기 프로젝트형 매출과 공공투자 사이클을 반영한다.",
-        "en": "Bridge, logistics and mobility systems reflect long-cycle project revenue and public investment cycles.",
-        "ja": "橋梁、物流、交通システムは長期プロジェクト型売上と公共投資サイクルを反映する。"
+        "ko": "사회 인프라와 교통 시스템은 단기 주가 모멘텀보다는 장기 프로젝트 매출과 수주잔고 안정성에 기여하는 영역이다. 교량, 물류, 교통 시스템은 공공투자 사이클과 도시 인프라 개선 정책에 영향을 받는다.\n\nKawasaki, Hitachi, Mitsubishi Electric, Siemens, Alstom, Hyundai Rotem과 함께 보면 철도, 교통제어, 자동화 물류, 도시 회복력 투자 흐름을 파악할 수 있다.\n\nIHI 입장에서는 이 섹터가 방산이나 항공엔진처럼 강한 리레이팅 동인은 아니지만, 사업 포트폴리오의 하방 방어력을 설명한다. 낮은 마진 프로젝트나 공공 예산 지연은 주요 리스크다.",
+        "en": "Infrastructure and mobility systems contribute more to long-cycle revenue and backlog stability than to short-term share-price momentum. Bridges, logistics and transport systems are influenced by public investment cycles and urban infrastructure policy.\n\nKawasaki, Hitachi, Mitsubishi Electric, Siemens, Alstom and Hyundai Rotem help frame rail, traffic control, automated logistics and urban resilience investment trends.\n\nFor IHI, this segment is not as strong a rerating driver as defense or aero engines, but it helps explain portfolio downside resilience. Low-margin projects and public budget delays are the main risks.",
+        "ja": "社会インフラと交通システムは短期的な株価モメンタムよりも、長期プロジェクト売上と受注残の安定性に寄与する領域である。橋梁、物流、交通システムは公共投資サイクルと都市インフラ政策の影響を受ける。\n\nKawasaki、Hitachi、Mitsubishi Electric、Siemens、Alstom、Hyundai Rotemと比較すると、鉄道、交通制御、自動物流、都市強靭化投資の流れを把握しやすい。\n\nIHIにとってこのセクターは防衛や航空エンジンほど強い再評価要因ではないが、事業ポートフォリオの下方耐性を説明する。低採算案件や公共予算の遅延が主なリスクである。"
       },
-      "tickers": ["7013.T", "7012.T", "6501.T", "6503.T", "SIE.DE", "ALO.PA", "064350.KS"],
-      "drivers": ["public infrastructure", "rail investment", "automation logistics", "urban resilience"],
-      "risk_factors": ["public budget delay", "low margin project", "execution risk"],
+      "tickers": [
+        "7013.T",
+        "7012.T",
+        "6501.T",
+        "6503.T",
+        "SIE.DE",
+        "ALO.PA",
+        "064350.KS"
+      ],
+      "drivers": [
+        "public infrastructure",
+        "rail investment",
+        "automation logistics",
+        "urban resilience"
+      ],
+      "risk_factors": [
+        "public budget delay",
+        "low margin project",
+        "execution risk"
+      ],
       "price_linkage": {
-        "ko": "인프라 사업은 주가의 단기 모멘텀보다는 실적 안정성과 수주잔고 방어력에 기여하는 성격이 강하다.",
-        "en": "Infrastructure is more important for earnings stability and backlog resilience than for short-term stock momentum.",
-        "ja": "インフラ事業は短期的な株価モメンタムよりも、収益安定性と受注残の耐久性に寄与する性格が強い。"
+        "ko": "",
+        "en": "",
+        "ja": ""
       }
     },
     {
       "segment_id": "maritime_heavy_industry",
-      "segment_name": { "ko": "조선 / 해양 / 특수선", "en": "Maritime / Shipbuilding / Special Vessels", "ja": "造船 / 海洋 / 特殊船" },
+      "segment_name": {
+        "ko": "조선 / 해양 / 특수선",
+        "en": "Maritime / Shipbuilding / Special Vessels",
+        "ja": "造船 / 海洋 / 特殊船"
+      },
       "ihi_relevance": "comparison",
       "ihi_linkage": {
-        "ko": "IHI의 현재 직접 비중은 제한적이지만, 중공업 밸류체인과 방산 해양 플랫폼 관점에서 비교 가치가 있다.",
-        "en": "Current direct exposure is limited, but the sector is useful for heavy-industry value-chain and naval-defense comparisons.",
-        "ja": "現在の直接的な比重は限定的だが、重工業バリューチェーンと海上防衛プラットフォーム比較の観点で有用である。"
+        "ko": "조선/해양/특수선은 현재 IHI의 직접 매출 비중이 제한적이지만, 일본 중공업과 해양 방산의 주변 테마로 참고할 가치가 있다. 특히 특수선, 해양 안보, LNG선 사이클은 중공업 투자심리에 영향을 준다.\n\nMHI, Kawasaki, HD현대중공업, 한화오션, 삼성중공업, BAE Systems, Leonardo를 함께 보면 해양 플랫폼과 방산 해군 수요의 흐름을 읽을 수 있다.\n\n다만 이 섹터를 IHI의 직접 촉매로 과대해석하면 안 된다. 페이지에서는 비교 및 주변 테마로 분류하고, IHI 주가와의 연결 강도는 방산/항공엔진보다 낮게 둔다.",
+        "en": "Maritime, shipbuilding and special vessels are currently limited as direct IHI revenue drivers, but they are useful adjacent themes for Japanese heavy industry and naval defense. Special vessels, maritime security and LNG carrier cycles influence heavy-industry sentiment.\n\nMHI, Kawasaki, HD Hyundai Heavy Industries, Hanwha Ocean, Samsung Heavy Industries, BAE Systems and Leonardo help frame naval platform and maritime defense demand.\n\nThis sector should not be overread as a direct IHI catalyst. The page should classify it as a comparison and adjacent theme, with weaker linkage to IHI's share price than defense or aero engines.",
+        "ja": "造船、海洋、特殊船は現在のIHIの直接売上ドライバーとしては限定的だが、日本重工業と海上防衛の周辺テーマとして参考価値がある。特殊船、海洋安全保障、LNG船サイクルは重工業への投資心理に影響する。\n\nMHI、Kawasaki、HD Hyundai Heavy Industries、Hanwha Ocean、Samsung Heavy Industries、BAE Systems、Leonardoを併せて見ると、海軍プラットフォームと海上防衛需要の流れを把握できる。\n\nただし、このセクターをIHIの直接材料として過大解釈してはならない。ページでは比較・周辺テーマとして分類し、IHI株価との連動度は防衛や航空エンジンより低く設定する。"
       },
-      "tickers": ["7011.T", "7012.T", "329180.KS", "042660.KS", "010140.KS", "BA.L", "LDO.MI"],
-      "drivers": ["naval ship demand", "LNG carriers", "offshore energy", "maritime security"],
-      "risk_factors": ["steel cost", "shipyard capacity", "order cycle"],
+      "tickers": [
+        "7011.T",
+        "7012.T",
+        "329180.KS",
+        "042660.KS",
+        "010140.KS",
+        "BA.L",
+        "LDO.MI"
+      ],
+      "drivers": [
+        "naval ship demand",
+        "LNG carriers",
+        "offshore energy",
+        "maritime security"
+      ],
+      "risk_factors": [
+        "steel cost",
+        "shipyard capacity",
+        "order cycle"
+      ],
       "price_linkage": {
-        "ko": "해양 방산과 LNG선 사이클은 중공업 투자심리를 보강하지만, IHI에는 직접 촉매보다는 비교 및 주변 테마로 분류한다.",
-        "en": "Naval defense and LNG carrier cycles support heavy-industry sentiment, but for IHI this is a comparison and adjacent theme rather than a direct catalyst.",
-        "ja": "海上防衛とLNG船サイクルは重工業への投資心理を支えるが、IHIにとっては直接材料というより比較・周辺テーマである。"
+        "ko": "",
+        "en": "",
+        "ja": ""
       }
     }
   ],
   "peer_group": [
-    { "company": "IHI Corporation", "ticker": "7013.T", "region": "Japan", "price": 3059, "currency": "JPY", "market_cap": "JPY 3.23T", "pe": 26.68, "revenue_ttm": "JPY 1.61T", "rsi": 42.57, "one_year_context": "Up strongly YoY but in correction from Feb 2026 high" },
-    { "company": "Mitsubishi Heavy Industries", "ticker": "7011.T", "region": "Japan", "price": 4498, "currency": "JPY", "market_cap": "JPY 15.21T", "pe": 48.90, "revenue_ttm": "JPY 5.31T", "rsi": 47.29, "one_year_context": "Large-cap Japan defense and energy prime; valuation premium remains high" },
-    { "company": "Kawasaki Heavy Industries", "ticker": "7012.T", "region": "Japan", "price": 3254, "currency": "JPY", "market_cap": "JPY 2.72T", "pe": 24.78, "revenue_ttm": "JPY 2.28T", "rsi": null, "one_year_context": "Close Japan heavy-industry peer with aerospace, rolling stock, energy and defense exposure" },
-    { "company": "Lockheed Martin", "ticker": "LMT", "region": "United States", "price": 506.51, "currency": "USD", "market_cap": "USD 118.14B", "pe": 24.94, "revenue_ttm": "USD 75.11B", "rsi": null, "one_year_context": "Global prime defense contractor; stock pulled back after Q1 miss despite missile and F-35 demand" },
-    { "company": "Hanwha Aerospace", "ticker": "012450.KS", "region": "South Korea", "price": 1317000, "currency": "KRW", "market_cap": "KRW 67.76T", "pe": 46.16, "revenue_ttm": "KRW 26.70T", "rsi": 40.26, "one_year_context": "K-defense export platform with elevated growth expectations and valuation sensitivity" },
-    { "company": "Rheinmetall", "ticker": "RHM.DE", "region": "Germany", "price": 1341.6, "currency": "EUR", "market_cap": "EUR 66.88B", "pe": 64.68, "revenue_ttm": "EUR 9.94B", "rsi": 39.05, "one_year_context": "European rearmament leader; backlog is strong but market is penalizing execution and timing risk" }
+    {
+      "company": "IHI Corporation",
+      "ticker": "7013.T",
+      "region": "Japan",
+      "price": 3059,
+      "currency": "JPY",
+      "market_cap": "JPY 3.23T",
+      "pe": 26.68,
+      "revenue_ttm": "JPY 1.61T",
+      "rsi": 42.57,
+      "one_year_context": {
+        "ko": "IHI는 일본 방산/항공엔진 리레이팅의 중간 지점에 있는 종목이다. MHI처럼 초대형 프라임은 아니지만, 항공엔진과 방산/우주 노출이 동시에 있어 실적 레버리지가 크다.\n\n현재 PER 26.68배, PBR 4.06배는 저평가보다는 성장 기대를 반영한다. 따라서 FY2026 영업이익 가이던스가 분기별로 확인되는지가 핵심이다.\n\n글로벌 피어와 비교하면 IHI는 미국 대형 방산주보다 작고, Rheinmetall/Hanwha보다 직접 방산 순도는 낮지만, 일본 재무장과 항공엔진 회복을 동시에 담는 독특한 포지션이다.",
+        "en": "IHI sits in the middle of Japan's defense and aero-engine rerating story. It is not as large as MHI, but its combined aero-engine, defense and space exposure creates meaningful earnings leverage.\n\nPER of 26.68x and PBR of 4.06x reflect growth expectations more than cheap valuation. Quarterly confirmation of FY2026 operating-profit guidance is therefore central.\n\nCompared with global peers, IHI is smaller than US defense primes and less pure-play than Rheinmetall or Hanwha, but it uniquely combines Japan rearmament and aero-engine recovery.",
+        "ja": "IHIは日本の防衛・航空エンジン再評価ストーリーの中間に位置する銘柄である。MHIほど巨大なプライムではないが、航空エンジン、防衛、宇宙への複合エクスポージャーにより利益レバレッジは大きい。\n\nPER26.68倍、PBR4.06倍は割安さよりも成長期待を反映している。したがってFY2026営業利益見通しが四半期ごとに確認されるかが重要である。\n\nグローバル同業と比べると、IHIは米国大手防衛株より小さく、RheinmetallやHanwhaほど防衛純度は高くないが、日本の再軍備と航空エンジン回復を同時に含む独自の位置づけである。"
+      }
+    },
+    {
+      "company": "Mitsubishi Heavy Industries",
+      "ticker": "7011.T",
+      "region": "Japan",
+      "price": 4498,
+      "currency": "JPY",
+      "market_cap": "JPY 15.21T",
+      "pe": 48.9,
+      "revenue_ttm": "JPY 5.31T",
+      "rsi": 47.29,
+      "one_year_context": {
+        "ko": "MHI는 일본 방산/원전/에너지/우주를 대표하는 초대형 중공업 프라임이다. IHI보다 규모가 크고 정책 수혜의 대표성이 강하다.\n\n높은 시가총액과 높은 PER은 시장이 이미 일본 방산 및 에너지 안보 프리미엄을 크게 부여하고 있음을 보여준다. 따라서 MHI는 섹터 방향성을 읽는 기준점으로 유용하다.\n\nIHI와 비교할 때 MHI는 안정성과 대표성이 강하고, IHI는 항공엔진 회복에 따른 이익 레버리지가 더 크게 보일 수 있다.",
+        "en": "MHI is Japan's large-scale heavy-industry prime across defense, nuclear, energy and space. It is larger than IHI and more representative of policy-driven demand.\n\nIts high market cap and elevated PER show that the market already assigns a significant Japan defense and energy-security premium. MHI is therefore a useful benchmark for sector direction.\n\nCompared with IHI, MHI offers stronger scale and representativeness, while IHI may show higher earnings leverage from aero-engine recovery.",
+        "ja": "MHIは防衛、原子力、エネルギー、宇宙を代表する日本の大型重工業プライムである。IHIより規模が大きく、政策需要の代表性も強い。\n\n高い時価総額とPERは、市場が日本防衛・エネルギー安全保障プレミアムを既に大きく付与していることを示す。MHIはセクター方向性を読む基準点として有用である。\n\nIHIと比べると、MHIは規模と代表性に優れ、IHIは航空エンジン回復による利益レバレッジがより大きく見えやすい。"
+      }
+    },
+    {
+      "company": "Kawasaki Heavy Industries",
+      "ticker": "7012.T",
+      "region": "Japan",
+      "price": 3254,
+      "currency": "JPY",
+      "market_cap": "JPY 2.72T",
+      "pe": 24.78,
+      "revenue_ttm": "JPY 2.28T",
+      "rsi": null,
+      "one_year_context": {
+        "ko": "Kawasaki Heavy는 IHI와 가장 가까운 일본 중공업 비교군 중 하나다. 항공우주, 에너지, 교통, 방산 노출이 혼합되어 있어 사업 포트폴리오 비교에 적합하다.\n\nIHI와 마찬가지로 단일 방산주가 아니라 경기 민감 중공업과 정책 수혜 사업이 섞여 있다. 따라서 7012.T의 움직임은 일본 중공업 전체에 대한 투자심리를 읽는 보조 지표가 된다.\n\nIHI 분석에서는 Kawasaki를 상대 밸류에이션과 섹터 순환의 기준으로 쓰는 것이 좋다.",
+        "en": "Kawasaki Heavy is one of the closest Japanese heavy-industry comparables to IHI. Its mixed aerospace, energy, mobility and defense exposure makes it useful for portfolio comparison.\n\nLike IHI, it is not a pure defense stock; it combines cyclical heavy industry with policy-beneficiary businesses. Its share movement is a useful indicator of sentiment toward Japanese heavy industry.\n\nFor IHI analysis, Kawasaki is best used as a relative-valuation and sector-rotation reference.",
+        "ja": "Kawasaki HeavyはIHIに最も近い日本重工業比較銘柄の一つである。航空宇宙、エネルギー、交通、防衛が混在しており、事業ポートフォリオ比較に適している。\n\nIHIと同様、純粋な防衛株ではなく、景気敏感型重工業と政策恩恵事業が混在している。7012.Tの動きは日本重工業全体への投資心理を読む補助指標となる。\n\nIHI分析では、Kawasakiを相対バリュエーションとセクター循環の基準として使うのがよい。"
+      }
+    },
+    {
+      "company": "Lockheed Martin",
+      "ticker": "LMT",
+      "region": "United States",
+      "price": 506.51,
+      "currency": "USD",
+      "market_cap": "USD 118.14B",
+      "pe": 24.94,
+      "revenue_ttm": "USD 75.11B",
+      "rsi": null,
+      "one_year_context": {
+        "ko": "Lockheed Martin은 글로벌 방산 프라임의 기준점이다. F-35, 미사일 방어, 우주방산 수요를 통해 지정학 리스크가 실적에 어떻게 반영되는지 보여준다.\n\n다만 LMT는 성숙한 미국 대형 방산주라 IHI와 성장 구조가 다르다. IHI가 리레이팅과 이익 회복의 조합이라면, LMT는 방산 예산 안정성과 납품 실행력이 핵심이다.\n\nLMT 실적 발표 후 주가 반응은 IHI에도 교훈을 준다. 테마가 강해도 마진과 납품이 기대에 못 미치면 주가는 조정받을 수 있다.",
+        "en": "Lockheed Martin is the benchmark global defense prime. F-35, missile defense and space-defense demand show how geopolitical risk converts into earnings.\n\nHowever, LMT is a mature US mega-cap defense stock, so its growth structure differs from IHI. IHI combines rerating and earnings recovery, while LMT depends more on budget stability and delivery execution.\n\nLMT's post-earnings share reactions are useful lessons for IHI: even a strong theme can correct if margins or deliveries disappoint.",
+        "ja": "Lockheed Martinはグローバル防衛プライムの基準点である。F-35、ミサイル防衛、宇宙防衛需要を通じて、地政学リスクが業績へどう反映されるかを示す。\n\nただしLMTは成熟した米国大型防衛株であり、IHIとは成長構造が異なる。IHIが再評価と利益回復の組み合わせである一方、LMTは防衛予算の安定性と納入実行力が中心である。\n\nLMTの決算後の株価反応はIHIにも示唆を与える。テーマが強くても、利益率や納入が期待を下回れば株価は調整し得る。"
+      }
+    },
+    {
+      "company": "Hanwha Aerospace",
+      "ticker": "012450.KS",
+      "region": "South Korea",
+      "price": 1317000,
+      "currency": "KRW",
+      "market_cap": "KRW 67.76T",
+      "pe": 46.16,
+      "revenue_ttm": "KRW 26.70T",
+      "rsi": 40.26,
+      "one_year_context": {
+        "ko": "Hanwha Aerospace는 한국 방산 수출 사이클의 대표 종목이다. K9, 천무, 항공엔진 및 방산 플랫폼 수출 기대가 주가 프리미엄을 만든다.\n\nIHI와 비교하면 Hanwha는 방산 수출 성장성이 더 직접적이고, IHI는 일본 정책 수혜와 항공엔진 회복이 혼합되어 있다. 두 종목은 아시아 방산 리레이팅을 비교하는 좋은 쌍이다.\n\n다만 Hanwha처럼 높은 성장 기대가 붙은 종목은 실적 발표와 수주 타이밍에 변동성이 크다. 이는 IHI에도 밸류에이션 부담을 점검해야 한다는 신호다.",
+        "en": "Hanwha Aerospace is the representative stock of Korea's defense-export cycle. K9, Chunmoo, aero engines and defense-platform export expectations create its premium.\n\nCompared with IHI, Hanwha has more direct defense-export growth, while IHI mixes Japan policy demand with aero-engine recovery. The two are useful for comparing Asian defense rerating.\n\nHigh-expectation stocks like Hanwha are volatile around earnings and order timing. That is a reminder to monitor valuation burden for IHI as well.",
+        "ja": "Hanwha Aerospaceは韓国防衛輸出サイクルを代表する銘柄である。K9、Chunmoo、航空エンジン、防衛プラットフォーム輸出期待が株価プレミアムを作る。\n\nIHIと比べると、Hanwhaは防衛輸出成長がより直接的であり、IHIは日本政策需要と航空エンジン回復が混在する。両銘柄はアジア防衛株の再評価を比較する上で有用である。\n\nHanwhaのように高い成長期待が付いた銘柄は、決算と受注タイミングで変動性が大きい。これはIHIにもバリュエーション負担を確認すべきという示唆を与える。"
+      }
+    },
+    {
+      "company": "Rheinmetall",
+      "ticker": "RHM.DE",
+      "region": "Germany",
+      "price": 1341.6,
+      "currency": "EUR",
+      "market_cap": "EUR 66.88B",
+      "pe": 64.68,
+      "revenue_ttm": "EUR 9.94B",
+      "rsi": 39.05,
+      "one_year_context": {
+        "ko": "Rheinmetall은 유럽 재무장 테마의 대표주다. 탄약, 장갑차, 방공 수요가 실적과 수주잔고를 끌어올리며 유럽 방산 리레이팅을 주도했다.\n\nIHI와 직접 사업 구성이 같지는 않지만, Rheinmetall은 시장이 방산주에서 무엇을 요구하는지 보여준다. 단순 수주잔고보다 생산능력, 매출 전환, 마진이 더 중요해지는 국면이다.\n\nRheinmetall의 조정은 IHI에도 경고다. 테마가 강해도 기대치가 높아진 뒤에는 실적 속도와 실행력이 주가를 결정한다.",
+        "en": "Rheinmetall is the flagship of Europe's rearmament theme. Ammunition, armored vehicles and air-defense demand have lifted earnings and backlog, driving European defense rerating.\n\nIts business mix is not identical to IHI, but Rheinmetall shows what the market demands from defense stocks. Production capacity, revenue conversion and margins matter more than backlog alone.\n\nRheinmetall's corrections are a warning for IHI: once expectations rise, execution speed and earnings delivery determine share-price direction.",
+        "ja": "Rheinmetallは欧州再軍備テーマの代表銘柄である。弾薬、装甲車、防空需要が業績と受注残を押し上げ、欧州防衛株の再評価を主導した。\n\nIHIと事業構成は同一ではないが、Rheinmetallは市場が防衛株に何を求めるかを示す。単なる受注残よりも、生産能力、売上転換、利益率が重要になる局面である。\n\nRheinmetallの調整はIHIにも警告となる。テーマが強くても期待値が高まった後は、実行速度と利益実現が株価を決定する。"
+      }
+    }
   ],
   "news_events": [
-    { "date": "2026-05-08", "title": "IHI released FY2025 consolidated financial results", "source": "IHI IR", "related_tickers": ["7013.T"], "sentiment": "positive", "impact_horizon": "medium", "price_linkage": { "observed": "May 8 close +0.46%; May 7 close +5.73%", "interpretation": { "ko": "실적 발표 전후로 거래량이 급증했고, FY2026 영업이익 45% 증가 가이던스가 단기 하방을 완화했다. 다만 2월 고점 대비 조정폭이 커서 확인 매수가 필요한 구간이다.", "en": "Trading volume surged around earnings. FY2026 guidance for 45% operating profit growth helped stabilize downside, but the stock remains well below its February high.", "ja": "決算前後で出来高が急増した。FY2026の営業利益45%増見通しは下値を支えたが、2月高値からの調整幅は大きく、確認買いが必要な局面である。" } } },
-    { "date": "2026-05-07", "title": "Rheinmetall Q1: sales up, backlog at EUR 73B, guidance reaffirmed", "source": "Rheinmetall", "related_tickers": ["RHM.DE", "7013.T", "7011.T", "LMT"], "sentiment": "mixed", "impact_horizon": "medium", "price_linkage": { "observed": "Rheinmetall fell sharply despite backlog growth because sales missed expectations.", "interpretation": { "ko": "글로벌 방산 수요는 강하지만, 시장은 생산능력과 매출 인식 속도를 더 엄격하게 보기 시작했다. IHI에도 수주 자체보다 방산 매출 전환 속도가 중요하다는 시사점이 있다.", "en": "Defense demand remains strong, but the market is increasingly focused on production capacity and revenue conversion, not only backlog. This is a direct read-through for IHI.", "ja": "防衛需要は強いが、市場は受注残だけでなく生産能力と売上化の速度を重視し始めている。IHIにも同じ示唆がある。" } } }
+    {
+      "date": "2026-05-08",
+      "title": "IHI released FY2025 consolidated financial results",
+      "source": "IHI IR",
+      "related_tickers": [
+        "7013.T"
+      ],
+      "sentiment": "positive",
+      "impact_horizon": "medium",
+      "price_linkage": {
+        "observed": "May 8 close +0.46%; May 7 close +5.73%",
+        "interpretation": {
+          "ko": "실적 발표 전후로 거래량이 급증했고, FY2026 영업이익 45% 증가 가이던스가 단기 하방을 완화했다. 다만 2월 고점 대비 조정폭이 커서 확인 매수가 필요한 구간이다.",
+          "en": "Trading volume surged around earnings. FY2026 guidance for 45% operating profit growth helped stabilize downside, but the stock remains well below its February high.",
+          "ja": "決算前後で出来高が急増した。FY2026の営業利益45%増見通しは下値を支えたが、2月高値からの調整幅は大きく、確認買いが必要な局面である。"
+        }
+      }
+    },
+    {
+      "date": "2026-05-07",
+      "title": "Rheinmetall Q1: sales up, backlog at EUR 73B, guidance reaffirmed",
+      "source": "Rheinmetall",
+      "related_tickers": [
+        "RHM.DE",
+        "7013.T",
+        "7011.T",
+        "LMT"
+      ],
+      "sentiment": "mixed",
+      "impact_horizon": "medium",
+      "price_linkage": {
+        "observed": "Rheinmetall fell sharply despite backlog growth because sales missed expectations.",
+        "interpretation": {
+          "ko": "글로벌 방산 수요는 강하지만, 시장은 생산능력과 매출 인식 속도를 더 엄격하게 보기 시작했다. IHI에도 수주 자체보다 방산 매출 전환 속도가 중요하다는 시사점이 있다.",
+          "en": "Defense demand remains strong, but the market is increasingly focused on production capacity and revenue conversion, not only backlog. This is a direct read-through for IHI.",
+          "ja": "防衛需要は強いが、市場は受注残だけでなく生産能力と売上化の速度を重視し始めている。IHIにも同じ示唆がある。"
+        }
+      }
+    }
   ],
   "technical_view": {
-    "support_zones": [2811, 2853, 3000],
-    "resistance_zones": [3300, 3500, 3930, 4698],
-    "trend_state": { "ko": "중기 하락 추세 안의 단기 반등. 3,300엔 돌파와 거래량 유지가 확인되면 반등 신뢰도가 올라간다.", "en": "Short-term rebound inside a medium-term correction. A break above JPY 3,300 with sustained volume would improve confidence.", "ja": "中期調整局面の中での短期反発。3,300円突破と出来高維持が確認されれば反発の信頼度が高まる。" },
-    "risk_state": { "ko": "2,800엔대 이탈 시 4월 저점 재확인 가능성이 커진다.", "en": "A break below the JPY 2,800 area would raise the risk of retesting the April low.", "ja": "2,800円台を割り込むと、4月安値を再確認するリスクが高まる。" }
+    "support_zones": [
+      2811,
+      2853,
+      3000
+    ],
+    "resistance_zones": [
+      3300,
+      3500,
+      3930,
+      4698
+    ],
+    "trend_state": {
+      "ko": "현재 7013.T는 2월 고점 이후의 중기 조정 안에서 단기 반등을 시도하는 구조다. 3월 이후 가격은 3,900엔대에서 2,800엔대까지 내려온 뒤 3,000엔 부근을 회복했고, 5월 8일에는 거래량이 크게 증가했다. 이는 하락 추세가 끝났다는 확정 신호라기보다, 실적 발표 이후 저점 확인 매수가 들어왔다는 신호에 가깝다.\n\n기술적으로는 3,000엔 부근이 1차 심리적 지지선이고, 2,850엔과 2,811엔은 4월 저점권을 구성한다. 위쪽으로는 3,300엔, 3,500엔, 3,930엔이 순차 저항이다. 특히 3,500엔을 회복하면 단기 반등을 넘어 중기 추세 복원 가능성을 논의할 수 있지만, 그 전까지는 박스권 반등으로 보는 편이 보수적이다.\n\n거래량 측면에서는 5월 8일의 급증이 중요하다. 이 거래량이 일회성 실적 이벤트로 끝나면 주가는 다시 3,000엔 전후에서 흔들릴 수 있고, 3,300엔 돌파 구간에서 거래량이 유지되면 수급 개선 신뢰도가 올라간다. 따라서 가격보다 거래량 동반 여부가 다음 기술적 확인 포인트다.",
+      "en": "Technically, 7013.T is attempting a short-term rebound inside a medium-term correction from the February high. Since March, the price fell from the JPY 3,900 area to the JPY 2,800 area, then recovered around JPY 3,000, with a sharp volume increase on May 8. This is less a confirmed trend reversal and more a sign of post-earnings bottom-check buying.\n\nThe first psychological support is around JPY 3,000, while JPY 2,850 and JPY 2,811 define the April low zone. On the upside, JPY 3,300, JPY 3,500 and JPY 3,930 are sequential resistance levels. A recovery above JPY 3,500 would allow discussion of medium-term trend repair, but until then the conservative view is a range rebound.\n\nVolume is the next key confirmation point. If the May 8 volume surge remains a one-off earnings event, the stock may continue to fluctuate around JPY 3,000. If volume persists during a break above JPY 3,300, confidence in supply-demand improvement would rise.",
+      "ja": "テクニカル面では、7013.Tは2月高値からの中期調整局面の中で短期反発を試している。3月以降、株価は3,900円台から2,800円台まで下落した後、3,000円近辺を回復し、5月8日には出来高が大きく増加した。これはトレンド反転の確定ではなく、決算後の底値確認買いに近いシグナルである。\n\n3,000円近辺が第一の心理的支持線であり、2,850円と2,811円が4月安値圏を構成する。上値では3,300円、3,500円、3,930円が順次抵抗線となる。特に3,500円を回復すれば中期トレンド修復を議論できるが、それまではレンジ内反発として見るのが保守的である。\n\n出来高面では5月8日の急増が重要である。この出来高が一過性の決算イベントに終われば、株価は再び3,000円前後で揺れやすい。3,300円突破時に出来高が維持されれば、需給改善への信頼度が高まる。"
+    },
+    "risk_state": {
+      "ko": "리스크는 2,850엔 이탈 여부에 있다. 이 가격대를 하회하면 단기 반등 시나리오는 약해지고, 4월 저점 재확인 가능성이 높아진다. 반대로 3,300엔 돌파 후 지지 전환이 확인되면 3,500엔 회복 시도가 가능하다.",
+      "en": "The key risk is a break below JPY 2,850. If that level fails, the short-term rebound scenario weakens and a retest of the April low becomes more likely. Conversely, if JPY 3,300 breaks and turns into support, a move toward JPY 3,500 becomes plausible.",
+      "ja": "リスクは2,850円割れである。この水準を下回ると短期反発シナリオは弱まり、4月安値の再確認リスクが高まる。一方、3,300円突破後に支持線化すれば、3,500円回復を試す展開が見込める。"
+    }
   },
   "trading_scenarios": {
-    "short_term": { "ko": "단기는 3,000엔 지지 확인 후 3,300엔 돌파 여부를 본다. 2,850엔 이탈 시 손절 또는 비중 축소가 합리적이다.", "en": "For short-term trading, watch whether JPY 3,000 holds and whether JPY 3,300 breaks. A move below JPY 2,850 favors stop-loss or position reduction.", "ja": "短期では3,000円の支持と3,300円突破を確認する。2,850円割れでは損切りまたはポジション縮小が合理的だ。" },
-    "medium_term": { "ko": "중기는 FY2026 가이던스의 분기 진행률, 방산 매출 전환, 민항 엔진 정비 비용 완화 여부가 핵심이다. 3,500엔 회복 시 추세 복원 가능성이 열린다.", "en": "Medium-term focus is FY2026 guidance progress, defense revenue conversion, and easing civil engine maintenance costs. A recovery above JPY 3,500 would reopen trend-repair potential.", "ja": "中期ではFY2026見通しの進捗、防衛売上への転換、民間エンジン整備費の緩和が焦点。3,500円回復でトレンド修復の可能性が開く。" },
-    "long_term": { "ko": "장기는 일본 방위비 확대, 항공 엔진 애프터마켓, 우주/SMR/에너지 전환 테마를 본다. 단, 이미 리레이팅된 섹터라 고점 추격보다 실적 확인형 분할 접근이 적합하다.", "en": "Long-term thesis rests on Japan defense spending, aero-engine aftermarket, space, SMR, and energy transition. Because the sector has rerated, staged entry after execution proof is preferable to chasing highs.", "ja": "長期では日本の防衛費拡大、航空エンジンのアフターマーケット、宇宙、SMR、エネルギー転換が軸となる。ただしセクターは既に再評価されており、高値追いより実績確認型の分割投資が適する。" }
+    "short_term": {
+      "ko": "단기 전략은 3,000엔 지지 확인과 3,300엔 돌파 여부를 중심으로 잡는다. 3,000엔 위에서 거래량이 유지되면 실적 발표 이후의 반등 신뢰도가 올라가지만, 2,850엔을 이탈하면 단기 반등 시나리오는 약해진다.\n\n추격매수보다는 3,000엔 부근의 지지 확인, 또는 3,300엔 돌파 후 되돌림 지지 확인이 더 안정적이다. 5월 8일 거래량 급증이 일회성인지, 후속 매수세로 이어지는지 확인해야 한다.\n\n단기 리스크는 실적 발표 후 재료 소멸, 글로벌 방산주 조정, 엔화 변동성이다. 손절 기준은 2,850엔 이탈, 공격적 매수 기준은 3,300엔 돌파 후 거래량 유지로 둔다.",
+      "en": "The short-term plan centers on whether JPY 3,000 holds and whether JPY 3,300 breaks. If volume stays firm above JPY 3,000, confidence in the post-earnings rebound improves; a break below JPY 2,850 weakens the rebound case.\n\nRather than chasing, a safer setup is either confirmation of support near JPY 3,000 or a pullback that holds after a break above JPY 3,300. The key is whether the May 8 volume surge was one-off or followed by continued buying.\n\nShort-term risks are post-earnings sell-the-news action, global defense-stock correction and yen volatility. The invalidation line is below JPY 2,850; the aggressive entry signal is a volume-backed break above JPY 3,300.",
+      "ja": "短期戦略は3,000円の支持確認と3,300円突破の有無を中心に置く。3,000円上で出来高が維持されれば決算後反発への信頼度は高まるが、2,850円を割り込むと短期反発シナリオは弱まる。\n\n追いかけ買いよりも、3,000円近辺の支持確認、または3,300円突破後の押し目支持確認の方が安定的である。5月8日の出来高急増が一過性か、継続的な買いにつながるかを確認すべきである。\n\n短期リスクは決算後の材料出尽くし、グローバル防衛株の調整、円相場変動である。無効化ラインは2,850円割れ、攻撃的な買い条件は3,300円突破と出来高維持である。"
+    },
+    "medium_term": {
+      "ko": "중기 전략은 FY2026 가이던스가 실제 분기 실적으로 따라오는지 확인하는 방식이 적합하다. 회사는 영업이익 45% 증가를 제시했으므로, 1분기와 2분기에서 항공엔진과 방산 매출 전환이 확인되어야 한다.\n\n주가 관점에서는 3,500엔 회복이 중기 추세 복원의 1차 신호다. 3,500엔 위에서 안착하면 3,930엔과 4,300엔대까지 회복 시나리오를 볼 수 있지만, 실적 확인 없이 밸류에이션만 높아지면 다시 조정이 나올 수 있다.\n\n중기 매매는 분할 접근이 적합하다. 실적 진행률, 수주잔고, 항공엔진 비용 정상화, 글로벌 방산 피어의 밸류에이션을 함께 확인하면서 비중을 조절한다.",
+      "en": "The medium-term plan should focus on whether FY2026 guidance converts into quarterly results. Management guided for 45% operating-profit growth, so Q1 and Q2 need to confirm aero-engine recovery and defense revenue conversion.\n\nFrom a price perspective, a recovery above JPY 3,500 is the first signal of medium-term trend repair. If the stock holds above that level, JPY 3,930 and the JPY 4,300 area become possible recovery targets, but valuation expansion without earnings confirmation could trigger another correction.\n\nA staged approach is preferable. Position size should be adjusted while monitoring earnings progress, backlog, aero-engine cost normalization and global defense-peer valuation.",
+      "ja": "中期戦略はFY2026見通しが実際の四半期業績に反映されるかを確認する形が適している。会社は営業利益45%増を示しているため、1Qと2Qで航空エンジン回復と防衛売上転換が確認される必要がある。\n\n株価面では3,500円回復が中期トレンド修復の第一シグナルである。この水準上で定着すれば3,930円、4,300円台への回復シナリオも見えるが、業績確認なしにバリュエーションだけが上がれば再調整の可能性がある。\n\n中期売買は分割アプローチが適する。業績進捗、受注残、航空エンジン費用正常化、グローバル防衛同業のバリュエーションを確認しながら比率を調整する。"
+    },
+    "long_term": {
+      "ko": "장기 전략은 일본 방위비 확대, 항공엔진 애프터마켓 회복, 우주/에너지 안보 테마를 묶어 보는 방식이다. IHI는 순수 방산주가 아니라 중공업 복합주이므로 여러 섹터의 성장과 리스크가 동시에 반영된다.\n\n장기 보유 관점에서는 고점 추격보다 실적 확인형 분할 매수가 더 적절하다. PER과 PBR이 이미 높아진 만큼, 주가가 쉬어갈 때 FY2026/FY2027 이익 성장의 신뢰도가 유지되는지를 확인해야 한다.\n\n장기 리스크는 엔진 비용 재발, 프로젝트 마진 악화, 일본 방위비 집행 지연, 글로벌 방산주 밸류에이션 조정이다. 장기 thesis가 유지되려면 수주 증가뿐 아니라 현금흐름과 ROE 유지가 같이 확인되어야 한다.",
+      "en": "The long-term plan combines Japan defense spending, aero-engine aftermarket recovery and space/energy-security themes. IHI is not a pure defense stock; it is a diversified heavy-industry name where multiple sector drivers and risks interact.\n\nFor long-term holding, staged buying after execution proof is preferable to chasing highs. Since PER and PBR have already expanded, pullbacks should be evaluated by whether FY2026/FY2027 earnings-growth confidence remains intact.\n\nLong-term risks include recurring engine costs, project-margin deterioration, delays in Japanese defense spending execution and global defense-stock valuation correction. The thesis requires not only order growth but also cash-flow conversion and ROE sustainability.",
+      "ja": "長期戦略は日本の防衛費拡大、航空エンジンアフターマーケット回復、宇宙・エネルギー安全保障テーマを組み合わせて見る形である。IHIは純粋な防衛株ではなく、複数セクターの成長とリスクが同時に反映される複合重工業株である。\n\n長期保有の観点では、高値追いよりも実績確認型の分割買いが適している。PERとPBRが既に高まっているため、押し目ではFY2026/FY2027の利益成長信頼度が維持されているかを確認すべきである。\n\n長期リスクはエンジン費用の再発、プロジェクトマージン悪化、日本防衛費執行の遅れ、グローバル防衛株のバリュエーション調整である。長期シナリオ維持には受注増だけでなく、キャッシュフロー転換とROE維持が必要である。"
+    }
   },
   "sources": [
-    { "title": "IHI official stock information", "url": "https://www.ihi.co.jp/en/ir/stock/information/", "used_for": "ticker identity and exchange confirmation" },
-    { "title": "IHI FY2025 consolidated financial results", "url": "https://www.ihi.co.jp/en/ir/library/statements/index.html", "used_for": "official FY2025 financial results and FY2026 forecast" },
-    { "title": "Kabutan IHI historical prices", "url": "https://en.kabutan.com/jp/stocks/7013/historical_prices/daily", "used_for": "latest May 8, 2026 close and daily OHLCV" },
-    { "title": "StockAnalysis IHI overview and financials", "url": "https://stockanalysis.com/quote/tyo/7013/", "used_for": "market cap, valuation, RSI, peer snapshot" },
-    { "title": "Rheinmetall Q1 2026 press release", "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/05/2026-05-07-rheinmetall-news-quarterly-statement-q1", "used_for": "global defense trend and order backlog analysis" }
+    {
+      "title": "IHI official stock information",
+      "url": "https://www.ihi.co.jp/en/ir/stock/information/",
+      "used_for": "ticker identity and exchange confirmation"
+    },
+    {
+      "title": "IHI FY2025 consolidated financial results",
+      "url": "https://www.ihi.co.jp/en/ir/library/statements/index.html",
+      "used_for": "official FY2025 financial results and FY2026 forecast"
+    },
+    {
+      "title": "Kabutan IHI historical prices",
+      "url": "https://en.kabutan.com/jp/stocks/7013/historical_prices/daily",
+      "used_for": "latest May 8, 2026 close and daily OHLCV"
+    },
+    {
+      "title": "StockAnalysis IHI overview and financials",
+      "url": "https://stockanalysis.com/quote/tyo/7013/",
+      "used_for": "market cap, valuation, RSI, peer snapshot"
+    },
+    {
+      "title": "Rheinmetall Q1 2026 press release",
+      "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/05/2026-05-07-rheinmetall-news-quarterly-statement-q1",
+      "used_for": "global defense trend and order backlog analysis"
+    }
   ],
   "disclaimer": {
     "ko": "본 자료는 투자 조언이 아닌 리서치/웹페이지 시각화용 정적 분석 데이터다. 투자 결정은 사용자의 책임이다.",

@@ -210,6 +210,7 @@ h2 {
 .risk-copy {
     color: var(--muted);
     line-height: 1.7;
+    white-space: pre-line;
 }
 
 .risk-copy { color: #ffc2c8; }
@@ -289,6 +290,7 @@ h2 {
 .strategy-card p {
     color: var(--muted);
     line-height: 1.55;
+    white-space: pre-line;
 }
 
 .segment-meta {

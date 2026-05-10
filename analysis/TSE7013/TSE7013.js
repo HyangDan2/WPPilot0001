@@ -37,6 +37,11 @@
         opMargin: "영업이익률",
         orders: "수주",
         forecast: "FY2026 회사 전망",
+        per: "PER",
+        pbr: "PBR",
+        eps: "EPS",
+        bps: "BPS",
+        debtRatio: "부채비율",
         drivers: "동인",
         risks: "리스크",
         relevance: "연결성"
@@ -79,6 +84,11 @@
         opMargin: "Operating Margin",
         orders: "Orders",
         forecast: "FY2026 Guidance",
+        per: "PER",
+        pbr: "PBR",
+        eps: "EPS",
+        bps: "BPS",
+        debtRatio: "Debt Ratio",
         drivers: "Drivers",
         risks: "Risks",
         relevance: "Relevance"
@@ -121,6 +131,11 @@
         opMargin: "営業利益率",
         orders: "受注",
         forecast: "FY2026会社予想",
+        per: "PER",
+        pbr: "PBR",
+        eps: "EPS",
+        bps: "BPS",
+        debtRatio: "負債比率",
         drivers: "ドライバー",
         risks: "リスク",
         relevance: "関連性"
@@ -243,6 +258,11 @@ function renderFinancials() {
         [labels[activeLang].netProfit, `${jpyB(f.profit_attributable_to_owners)} / YoY ${f.profit_attributable_yoy_percent}%`],
         [labels[activeLang].roe, `${f.roe_percent}%`],
         [labels[activeLang].opMargin, `${f.operating_margin_percent}%`],
+        [labels[activeLang].per, `${f.per}x`],
+        [labels[activeLang].pbr, `${f.pbr}x`],
+        [labels[activeLang].eps, `${f.basic_eps_yen} JPY`],
+        [labels[activeLang].bps, `${f.bps_yen} JPY`],
+        [labels[activeLang].debtRatio, `${f.debt_ratio_percent}%`],
         [labels[activeLang].orders, jpyB(f.orders_received)],
         [labels[activeLang].forecast, `${jpyB(f.forecast_fy2026.revenue)} / OP ${jpyB(f.forecast_fy2026.operating_profit)}`]
     ];
@@ -258,7 +278,10 @@ function renderTechnicals() {
 }
 
 function renderPeers() {
-    document.getElementById("peerGrid").innerHTML = pageData.peer_group.map((peer) => `<article class="peer-card"><h3>${peer.company}</h3><dl><dt>Ticker</dt><dd>${peer.ticker}</dd><dt>Region</dt><dd>${peer.region}</dd><dt>Price</dt><dd>${money(peer.price, peer.currency)}</dd><dt>Market Cap</dt><dd>${peer.market_cap}</dd><dt>PER</dt><dd>${peer.pe ?? "-"}</dd></dl><p>${peer.one_year_context}</p></article>`).join("");
+    document.getElementById("peerGrid").innerHTML = pageData.peer_group.map((peer) => {
+        const context = typeof peer.one_year_context === "string" ? peer.one_year_context : peer.one_year_context[activeLang];
+        return `<article class="peer-card"><h3>${peer.company}</h3><dl><dt>Ticker</dt><dd>${peer.ticker}</dd><dt>Region</dt><dd>${peer.region}</dd><dt>Price</dt><dd>${money(peer.price, peer.currency)}</dd><dt>Market Cap</dt><dd>${peer.market_cap}</dd><dt>PER</dt><dd>${peer.pe ?? "-"}</dd></dl><p>${context}</p></article>`;
+    }).join("");
 }
 
 function renderSegments() {
@@ -267,7 +290,9 @@ function renderSegments() {
         const drivers = segment.drivers.slice(0, 4).map((driver) => `<span class="pill">${driver}</span>`).join("");
         const risks = segment.risk_factors.slice(0, 3).map((risk) => `<span class="pill mixed">${risk}</span>`).join("");
         const tickers = segment.tickers.map((ticker) => `<span class="pill">${ticker}</span>`).join("");
-        return `<article class="segment-card"><h3>${segment.segment_name[activeLang]}</h3><div class="segment-meta"><span class="pill positive">${labels[activeLang].relevance}: ${segment.ihi_relevance}</span></div><p>${segment.ihi_linkage[activeLang]}</p><p>${segment.price_linkage[activeLang]}</p><div class="segment-meta"><strong>${labels[activeLang].drivers}</strong>${drivers}</div><div class="segment-meta"><strong>${labels[activeLang].risks}</strong>${risks}</div><div class="ticker-row">${tickers}</div></article>`;
+        const linkage = segment.ihi_linkage[activeLang];
+        const priceLinkage = segment.price_linkage?.[activeLang] ? `<p>${segment.price_linkage[activeLang]}</p>` : "";
+        return `<article class="segment-card"><h3>${segment.segment_name[activeLang]}</h3><div class="segment-meta"><span class="pill positive">${labels[activeLang].relevance}: ${segment.ihi_relevance}</span></div><p>${linkage}</p>${priceLinkage}<div class="segment-meta"><strong>${labels[activeLang].drivers}</strong>${drivers}</div><div class="segment-meta"><strong>${labels[activeLang].risks}</strong>${risks}</div><div class="ticker-row">${tickers}</div></article>`;
     }).join("");
 }
 
