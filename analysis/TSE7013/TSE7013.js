@@ -14,6 +14,8 @@
         financialTitle: "재무제표 분석",
         technicalEyebrow: "Technical",
         technicalTitle: "기술적 관점",
+        segmentEyebrow: "Business Segment Map",
+        segmentTitle: "IHI 사업부별 글로벌 섹터 맵",
         peerEyebrow: "Global Peers",
         peerTitle: "일본 및 글로벌 비교군",
         newsEyebrow: "News x Price",
@@ -34,7 +36,10 @@
         roe: "ROE",
         opMargin: "영업이익률",
         orders: "수주",
-        forecast: "FY2026 회사 전망"
+        forecast: "FY2026 회사 전망",
+        drivers: "동인",
+        risks: "리스크",
+        relevance: "연결성"
     },
     en: {
         heroTitle: "IHI Corporation Global Defense & Aerospace Analysis",
@@ -51,6 +56,8 @@
         financialTitle: "Financial Statement Analysis",
         technicalEyebrow: "Technical",
         technicalTitle: "Technical View",
+        segmentEyebrow: "Business Segment Map",
+        segmentTitle: "IHI Business Segment Global Sector Map",
         peerEyebrow: "Global Peers",
         peerTitle: "Japan and Global Peer Group",
         newsEyebrow: "News x Price",
@@ -71,7 +78,10 @@
         roe: "ROE",
         opMargin: "Operating Margin",
         orders: "Orders",
-        forecast: "FY2026 Guidance"
+        forecast: "FY2026 Guidance",
+        drivers: "Drivers",
+        risks: "Risks",
+        relevance: "Relevance"
     },
     ja: {
         heroTitle: "IHI Corporation グローバル防衛・航空宇宙分析",
@@ -88,6 +98,8 @@
         financialTitle: "財務諸表分析",
         technicalEyebrow: "Technical",
         technicalTitle: "テクニカル見解",
+        segmentEyebrow: "Business Segment Map",
+        segmentTitle: "IHI事業セグメント別グローバルセクターマップ",
         peerEyebrow: "Global Peers",
         peerTitle: "日本およびグローバル比較銘柄",
         newsEyebrow: "News x Price",
@@ -108,7 +120,10 @@
         roe: "ROE",
         opMargin: "営業利益率",
         orders: "受注",
-        forecast: "FY2026会社予想"
+        forecast: "FY2026会社予想",
+        drivers: "ドライバー",
+        risks: "リスク",
+        relevance: "関連性"
     }
 };
 
@@ -151,6 +166,7 @@ function render() {
     renderChart();
     renderFinancials();
     renderTechnicals();
+    renderSegments();
     renderPeers();
     renderNews();
     renderStrategies();
@@ -243,6 +259,16 @@ function renderTechnicals() {
 
 function renderPeers() {
     document.getElementById("peerGrid").innerHTML = pageData.peer_group.map((peer) => `<article class="peer-card"><h3>${peer.company}</h3><dl><dt>Ticker</dt><dd>${peer.ticker}</dd><dt>Region</dt><dd>${peer.region}</dd><dt>Price</dt><dd>${money(peer.price, peer.currency)}</dd><dt>Market Cap</dt><dd>${peer.market_cap}</dd><dt>PER</dt><dd>${peer.pe ?? "-"}</dd></dl><p>${peer.one_year_context}</p></article>`).join("");
+}
+
+function renderSegments() {
+    const segments = pageData.segment_sector_map || [];
+    document.getElementById("segmentGrid").innerHTML = segments.map((segment) => {
+        const drivers = segment.drivers.slice(0, 4).map((driver) => `<span class="pill">${driver}</span>`).join("");
+        const risks = segment.risk_factors.slice(0, 3).map((risk) => `<span class="pill mixed">${risk}</span>`).join("");
+        const tickers = segment.tickers.map((ticker) => `<span class="pill">${ticker}</span>`).join("");
+        return `<article class="segment-card"><h3>${segment.segment_name[activeLang]}</h3><div class="segment-meta"><span class="pill positive">${labels[activeLang].relevance}: ${segment.ihi_relevance}</span></div><p>${segment.ihi_linkage[activeLang]}</p><p>${segment.price_linkage[activeLang]}</p><div class="segment-meta"><strong>${labels[activeLang].drivers}</strong>${drivers}</div><div class="segment-meta"><strong>${labels[activeLang].risks}</strong>${risks}</div><div class="ticker-row">${tickers}</div></article>`;
+    }).join("");
 }
 
 function renderNews() {

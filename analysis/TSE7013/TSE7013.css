@@ -249,7 +249,14 @@ h2 {
     gap: 12px;
 }
 
+.segment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
 .peer-card,
+.segment-card,
 .news-item,
 .strategy-card {
     padding: 16px;
@@ -259,6 +266,7 @@ h2 {
 }
 
 .peer-card h3,
+.segment-card h3,
 .news-item h3,
 .strategy-card h3 {
     margin: 0 0 10px;
@@ -276,10 +284,25 @@ h2 {
 .peer-card dd { margin: 0; }
 
 .peer-card p,
+.segment-card p,
 .news-item p,
 .strategy-card p {
     color: var(--muted);
     line-height: 1.55;
+}
+
+.segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0 12px;
+}
+
+.segment-card .ticker-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
 }
 
 .news-list {
@@ -334,6 +357,7 @@ h2 {
 
     .summary-grid,
     .peer-grid,
+    .segment-grid,
     .strategy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -343,6 +367,7 @@ h2 {
 
     .summary-grid,
     .peer-grid,
+    .segment-grid,
     .strategy-grid { grid-template-columns: 1fr; }
 
     .chart-wrap { height: 300px; }

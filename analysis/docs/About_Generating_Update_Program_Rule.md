@@ -61,6 +61,7 @@ Each raw data JSON must include:
 - `recent_prices`
 - `monthly_prices`
 - `financials`
+- `segment_sector_map`
 - `peer_group`
 - `news_events`
 - `technical_view`
@@ -145,6 +146,48 @@ The default peer group must include:
 - Rheinmetall `RHM.DE`
 
 The updater may add RTX, Northrop Grumman, BAE Systems, Thales, Leonardo, LIG Nex1, Hyundai Rotem, or Komatsu when the analysis objective requires broader comparison.
+
+## Segment Sector Map Rule
+
+The updater must generate `segment_sector_map` to avoid treating IHI as a pure defense stock. IHI should be analyzed as a multi-segment heavy-industry company.
+
+Each `segment_sector_map` item must include:
+
+- `segment_id`
+- `segment_name.ko/en/ja`
+- `ihi_relevance`
+- `ihi_linkage.ko/en/ja`
+- `tickers`
+- `drivers`
+- `risk_factors`
+- `price_linkage.ko/en/ja`
+
+Allowed `ihi_relevance` values:
+
+- `direct`
+- `direct_adjacent`
+- `adjacent`
+- `comparison`
+
+The default segment map must include:
+
+- Defense / Space
+- Aero Engines / Aviation Components
+- Energy / Nuclear / SMR
+- Industrial Machinery / Turbomachinery
+- Infrastructure / Mobility Systems
+- Maritime / Shipbuilding / Special Vessels
+
+Default ticker candidates by segment:
+
+- Defense / Space: `7013.T`, `7011.T`, `7012.T`, `LMT`, `RTX`, `NOC`, `RHM.DE`, `BA.L`, `HO.PA`, `012450.KS`
+- Aero Engines / Aviation Components: `7013.T`, `RTX`, `GE`, `SAF.PA`, `RR.L`, `MTX.DE`, `7012.T`, `012450.KS`
+- Energy / Nuclear / SMR: `7013.T`, `7011.T`, `6501.T`, `ENR.DE`, `GEV`, `034020.KS`, `BWXT`, `CCJ`
+- Industrial Machinery / Turbomachinery: `7013.T`, `7011.T`, `7012.T`, `6361.T`, `6301.T`, `6501.T`, `SIE.DE`, `CAT`
+- Infrastructure / Mobility Systems: `7013.T`, `7012.T`, `6501.T`, `6503.T`, `SIE.DE`, `ALO.PA`, `064350.KS`
+- Maritime / Shipbuilding / Special Vessels: `7011.T`, `7012.T`, `329180.KS`, `042660.KS`, `010140.KS`, `BA.L`, `LDO.MI`
+
+The updater must explain whether each segment is a direct IHI catalyst, an adjacent macro/industrial comparison, or only a reference sector. This distinction is important because defense news, aero-engine cost news, nuclear/SMR news, and shipbuilding news do not affect IHI with the same intensity.
 
 ## News and Price Linkage Rule
 
@@ -264,10 +307,11 @@ The updater must preserve:
 2. Fetch latest market date and price snapshot.
 3. Fetch recent chart data.
 4. Fetch latest official financials.
-5. Fetch peer valuation snapshots.
-6. Fetch recent global defense/aerospace news.
-7. Generate multilingual analysis.
-8. Validate JSON schema.
-9. Write timestamped raw data.
-10. Update `latest.json`.
-11. Optionally commit the generated files.
+5. Build the business segment sector map.
+6. Fetch peer valuation snapshots.
+7. Fetch recent global defense/aerospace and adjacent-sector news.
+8. Generate multilingual analysis.
+9. Validate JSON schema.
+10. Write timestamped raw data.
+11. Update `latest.json`.
+12. Optionally commit the generated files.
