@@ -148,7 +148,7 @@ let priceChart;
 
 const formatNumber = (value) => new Intl.NumberFormat().format(value);
 const money = (value, currency) => `${formatNumber(value)} ${currency}`;
-const jpyB = (value) => `JPY ${(value / 1000).toLocaleString(undefined, { maximumFractionDigits: 1 })}B`;
+const jpyB = (value) => `KRW ${(value / 1000).toLocaleString(undefined, { maximumFractionDigits: 1 })}B`;
 
 async function loadData() {
     const latestResponse = await fetch("latest.json");
