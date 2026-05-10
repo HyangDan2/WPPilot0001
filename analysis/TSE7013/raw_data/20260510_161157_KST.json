@@ -565,40 +565,198 @@
   "news_events": [
     {
       "date": "2026-05-08",
-      "title": "IHI released FY2025 consolidated financial results",
+      "title": "IHI released FY2025 consolidated financial results and FY2026 guidance",
       "source": "IHI IR",
+      "url": "https://www.ihi.co.jp/en/ir/library/statements/index.html",
       "related_tickers": [
         "7013.T"
       ],
       "sentiment": "positive",
       "impact_horizon": "medium",
       "price_linkage": {
-        "observed": "May 8 close +0.46%; May 7 close +5.73%",
+        "observed": "May 8 close +0.46%; May 7 close +5.73%; volume expanded sharply around the earnings window.",
         "interpretation": {
-          "ko": "실적 발표 전후로 거래량이 급증했고, FY2026 영업이익 45% 증가 가이던스가 단기 하방을 완화했다. 다만 2월 고점 대비 조정폭이 커서 확인 매수가 필요한 구간이다.",
-          "en": "Trading volume surged around earnings. FY2026 guidance for 45% operating profit growth helped stabilize downside, but the stock remains well below its February high.",
-          "ja": "決算前後で出来高が急増した。FY2026の営業利益45%増見通しは下値を支えたが、2月高値からの調整幅は大きく、確認買いが必要な局面である。"
+          "ko": "FY2026 영업이익 45% 증가 가이던스는 단기 하방을 완화하는 재료다. 다만 2월 고점 대비 조정폭이 커서, 시장은 숫자 자체보다 분기별 이익 진행률을 확인하려 할 가능성이 높다.",
+          "en": "FY2026 guidance for 45% operating-profit growth is a downside stabilizer. Because the stock is still far below its February high, the market will likely focus on quarterly delivery rather than guidance alone.",
+          "ja": "FY2026の営業利益45%増見通しは下値を支える材料である。ただし2月高値からの調整幅が大きいため、市場は見通しそのものより四半期ごとの進捗を重視する可能性が高い。"
         }
       }
     },
     {
       "date": "2026-05-07",
-      "title": "Rheinmetall Q1: sales up, backlog at EUR 73B, guidance reaffirmed",
-      "source": "Rheinmetall",
+      "title": "IHI share price rebounded before earnings release",
+      "source": "StockInvest / market data summary",
+      "url": "https://stockinvest.us/earnings-report/7013.T",
       "related_tickers": [
-        "RHM.DE",
-        "7013.T",
-        "7011.T",
-        "LMT"
+        "7013.T"
       ],
       "sentiment": "mixed",
+      "impact_horizon": "short",
+      "price_linkage": {
+        "observed": "May 7 close +5.73% at JPY 3,045 before the May 8 earnings event.",
+        "interpretation": {
+          "ko": "실적 발표 직전 강한 반등은 기대 선반영 성격이 있다. 이후 주가가 3,300엔을 돌파하지 못하면 단기 차익실현이 나올 수 있고, 돌파하면 실적 확인 매수로 해석할 수 있다.",
+          "en": "The pre-earnings rebound likely included expectation buying. Failure to break JPY 3,300 could invite profit-taking, while a break would suggest earnings-confirmation buying.",
+          "ja": "決算直前の強い反発には期待先行の性格がある。3,300円を突破できなければ短期利食いが出やすく、突破すれば決算確認買いと解釈できる。"
+        }
+      }
+    },
+    {
+      "date": "2026-04-23",
+      "title": "IHI disclosed a notice concerning change of major shareholder",
+      "source": "IHI IR News",
+      "url": "https://www.ihi.co.jp/en/ir/news/2026/index.html",
+      "related_tickers": [
+        "7013.T"
+      ],
+      "sentiment": "neutral",
+      "impact_horizon": "short",
+      "price_linkage": {
+        "observed": "Governance and shareholder-structure news usually affects sentiment more than operating earnings unless it changes control or capital policy.",
+        "interpretation": {
+          "ko": "대주주 변동 공시는 영업 실적 촉매라기보다 수급과 지배구조 관점의 이벤트다. 주가 영향은 단기적일 가능성이 높고, 실제 의미는 주주 구성 변화가 자본정책으로 이어지는지에 달려 있다.",
+          "en": "Major-shareholder notices are more about ownership structure and supply-demand than operating earnings. The price impact is likely short-term unless it leads to capital-policy changes.",
+          "ja": "大株主異動の開示は営業業績材料というより、需給とガバナンスのイベントである。株価影響は短期的になりやすく、実質的な意味は資本政策への波及有無に左右される。"
+        }
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "title": "IHI announced transfer of non-current assets and gain on transfer",
+      "source": "IHI IR disclosure",
+      "url": "https://www.ihi.co.jp/en/ir/news/2025/__icsFiles/afieldfile/2026/03/27/Notice_Regarding_the_Transfer_of_Non-current_Assets_and_the_Recording_of_Gain_on_Transfer.pdf",
+      "related_tickers": [
+        "7013.T"
+      ],
+      "sentiment": "positive",
       "impact_horizon": "medium",
       "price_linkage": {
-        "observed": "Rheinmetall fell sharply despite backlog growth because sales missed expectations.",
+        "observed": "IHI expected gains of roughly JPY 8.7B in FY2026 and JPY 8.8B in FY2027, while noting no change to the FY2026 consolidated forecast.",
         "interpretation": {
-          "ko": "글로벌 방산 수요는 강하지만, 시장은 생산능력과 매출 인식 속도를 더 엄격하게 보기 시작했다. IHI에도 수주 자체보다 방산 매출 전환 속도가 중요하다는 시사점이 있다.",
-          "en": "Defense demand remains strong, but the market is increasingly focused on production capacity and revenue conversion, not only backlog. This is a direct read-through for IHI.",
-          "ja": "防衛需要は強いが、市場は受注残だけでなく生産能力と売上化の速度を重視し始めている。IHIにも同じ示唆がある。"
+          "ko": "비유동자산 매각 이익은 자본효율 개선과 재무 기반 강화라는 긍정적 메시지를 준다. 다만 영업력 개선이 아닌 일회성 이익 성격이므로 PER 평가에서는 핵심 영업이익과 분리해서 봐야 한다.",
+          "en": "Asset-sale gains send a positive message on capital efficiency and balance-sheet strengthening. However, because they are non-operating and one-off in nature, they should be separated from core operating profit when valuing the stock.",
+          "ja": "固定資産売却益は資本効率改善と財務基盤強化という前向きなメッセージを持つ。ただし営業力改善ではなく一過性利益であるため、PER評価ではコア営業利益と分けて見るべきである。"
+        }
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "title": "Tokyo Gas Ohgishima LNG in-ground tank built with IHI Plant certified as world largest",
+      "source": "IHI press release",
+      "url": "https://www.ihi.co.jp/en/all_news/2026/resources_energy_environment/1201989_13814.html",
+      "related_tickers": [
+        "7013.T",
+        "9501.T"
+      ],
+      "sentiment": "positive",
+      "impact_horizon": "long",
+      "price_linkage": {
+        "observed": "The event highlights IHI Plant technical track record in LNG storage infrastructure rather than near-term earnings surprise.",
+        "interpretation": {
+          "ko": "LNG 탱크 세계기록 인증은 단기 실적 이벤트보다는 에너지 인프라 기술력의 신뢰도를 높이는 뉴스다. 주가에는 직접 촉매보다는 장기 수주 경쟁력과 포트폴리오 방어력 측면에서 긍정적이다.",
+          "en": "The LNG tank certification is less a near-term earnings catalyst and more a credibility signal for energy-infrastructure technology. For the stock, it supports long-term order competitiveness and portfolio resilience.",
+          "ja": "LNGタンクの世界記録認定は短期業績材料というより、エネルギーインフラ技術力への信頼を高めるニュースである。株価には直接材料というより、長期受注競争力とポートフォリオ耐性の面でプラスである。"
+        }
+      }
+    },
+    {
+      "date": "2026-04-15",
+      "title": "IHI participated as speaker at SEA JAPAN 2026 maritime seminar",
+      "source": "IHI news list",
+      "url": "https://www.ihi.co.jp/en/all_news/2026/index.html",
+      "related_tickers": [
+        "7013.T",
+        "7011.T",
+        "7012.T"
+      ],
+      "sentiment": "neutral",
+      "impact_horizon": "medium",
+      "price_linkage": {
+        "observed": "Maritime exposure is an adjacent heavy-industry theme, not the strongest direct driver for 7013.T.",
+        "interpretation": {
+          "ko": "SEA JAPAN 참여는 해양/특수선/인프라 분야에서 IHI의 산업 네트워크를 보여준다. 다만 현재 주가 핵심은 방산과 항공엔진이므로, 이 뉴스는 직접 촉매보다 주변 섹터 맵 강화 재료로 보는 편이 적절하다.",
+          "en": "SEA JAPAN participation shows IHI’s industrial network in maritime, special vessels and infrastructure. Since the stock’s core drivers are defense and aero engines, this should be treated as adjacent sector-map support rather than a direct catalyst.",
+          "ja": "SEA JAPAN参加は海洋、特殊船、インフラ領域におけるIHIの産業ネットワークを示す。ただし株価の主因は防衛と航空エンジンであり、このニュースは直接材料ではなく周辺セクターマップの補強材料と見るべきである。"
+        }
+      }
+    },
+    {
+      "date": "2026-04-14",
+      "title": "IHI and Babcock Power subsidiaries signed collaboration for low-carbon fuel boiler retrofits",
+      "source": "IHI press release",
+      "url": "https://www.ihi.co.jp/en/all_news/2026/resources_energy_environment/1201971_13814.html",
+      "related_tickers": [
+        "7013.T",
+        "ENR.DE",
+        "GEV"
+      ],
+      "sentiment": "positive",
+      "impact_horizon": "long",
+      "price_linkage": {
+        "observed": "The agreement targets global boiler retrofit demand for low-carbon fuels such as ammonia.",
+        "interpretation": {
+          "ko": "Babcock Power와의 협업은 암모니아 등 저탄소 연료 전환 수요를 글로벌로 노리는 에너지 전환 뉴스다. 단기 매출보다 장기 옵션 가치가 크며, IHI의 에너지/터보머신 섹터 멀티플 방어에 도움이 된다.",
+          "en": "The Babcock Power collaboration targets global demand for low-carbon fuel conversion, including ammonia. It is more long-term option value than near-term revenue, supporting IHI’s energy and turbomachinery narrative.",
+          "ja": "Babcock Powerとの協業は、アンモニアなど低炭素燃料転換需要をグローバルに狙うエネルギー転換ニュースである。短期売上より長期オプション価値が大きく、IHIのエネルギー・ターボ機械テーマを支える。"
+        }
+      }
+    },
+    {
+      "date": "2026-04-10",
+      "title": "IHI signed JCDA with PETRONAS and Gentari for ammonia-powered gas turbine demonstration",
+      "source": "IHI press release",
+      "url": "https://www.ihi.co.jp/en/all_news/2026/resources_energy_environment/1201968_13814.html",
+      "related_tickers": [
+        "7013.T"
+      ],
+      "sentiment": "positive",
+      "impact_horizon": "long",
+      "price_linkage": {
+        "observed": "The project demonstrates IHI’s fully ammonia-powered IM270 gas turbine using ammonia produced at a Malaysian petrochemical complex.",
+        "interpretation": {
+          "ko": "암모니아 전소 가스터빈 실증은 IHI의 에너지 전환 기술 프리미엄을 만드는 장기 재료다. 주가에는 당장 실적보다 기술 옵션으로 작동하며, 상용화 일정과 후속 수주 여부가 중요하다.",
+          "en": "The ammonia gas-turbine demonstration is a long-term technology-premium catalyst. For the stock it works more as a technology option than immediate earnings, with commercialization timeline and follow-on orders as key checkpoints.",
+          "ja": "アンモニア専焼ガスタービン実証はIHIのエネルギー転換技術プレミアムを形成する長期材料である。株価には直近業績より技術オプションとして作用し、商用化時期と後続受注が重要となる。"
+        }
+      }
+    },
+    {
+      "date": "2026-04-02",
+      "title": "IHI Aerospace and ArianeGroup signed cooperation agreement for SSA optical observatory",
+      "source": "IHI press release / ArianeGroup",
+      "url": "https://www.ihi.co.jp/en/all_news/2026/aeroengine_space_defense/1201981_13820.html",
+      "related_tickers": [
+        "7013.T"
+      ],
+      "sentiment": "positive",
+      "impact_horizon": "long",
+      "price_linkage": {
+        "observed": "The agreement enhances Japan-France cooperation in space situational awareness and observation infrastructure.",
+        "interpretation": {
+          "ko": "SSA 광학 관측소 협력은 IHI의 우주안보 포지션을 강화한다. 단기 매출 규모는 제한적일 수 있지만, 일본 방산/우주 예산 확대와 연결되면 장기 프리미엄을 지지하는 뉴스다.",
+          "en": "The SSA observatory cooperation strengthens IHI’s space-security positioning. Near-term revenue may be limited, but if linked with Japan defense and space budgets, it supports long-term premium.",
+          "ja": "SSA光学観測所の協力はIHIの宇宙安全保障ポジションを強化する。短期売上規模は限定的でも、日本の防衛・宇宙予算拡大と結びつけば長期プレミアムを支えるニュースである。"
+        }
+      }
+    },
+    {
+      "date": "2025-12-26",
+      "title": "Japan approved record FY2026 defense budget above JPY 9T",
+      "source": "Naval News",
+      "url": "https://www.navalnews.com/naval-news/2025/12/japan-approves-record-defense-budget-for-fiscal-year-2026/",
+      "related_tickers": [
+        "7013.T",
+        "7011.T",
+        "7012.T"
+      ],
+      "sentiment": "positive",
+      "impact_horizon": "long",
+      "price_linkage": {
+        "observed": "Japanese defense primes have rerated since 2024-2026 amid defense budget expansion and standoff capability investment.",
+        "interpretation": {
+          "ko": "일본 방위비 9조 엔대 예산은 IHI, MHI, Kawasaki 같은 일본 중공업 방산주에 구조적 수요 배경을 제공한다. 단기 주가는 실적과 차트에 흔들려도 장기 내러티브는 계속 방산/우주 확장에 있다.",
+          "en": "Japan’s JPY 9T-class defense budget provides structural demand support for Japanese heavy-industry defense names such as IHI, MHI and Kawasaki. Short-term price action may follow earnings and charts, but the long-term narrative remains defense and space expansion.",
+          "ja": "日本の9兆円台防衛予算は、IHI、MHI、Kawasakiのような日本重工業防衛株に構造的需要の背景を与える。短期株価は業績とチャートに左右されても、長期シナリオは防衛・宇宙拡大にある。"
         }
       }
     }

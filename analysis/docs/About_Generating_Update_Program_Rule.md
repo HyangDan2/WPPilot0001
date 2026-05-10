@@ -1,21 +1,112 @@
-# About Generating Update Program Rule
+﻿# Stock Analysis Static Data Harness Rule
 
 ## Purpose
 
-This document defines the harness rules for an Agentic AI updater that generates static analysis data for the GitHub Pages page:
+This document defines the harness rules for an Agentic AI updater that generates static stock-analysis data for GitHub Pages.
 
-`analysis/TSE7013/TSE7013.html`
+The updater must work from a generic input pair:
 
-The updater must create timestamped knowledge-map JSON files and maintain a stable `latest.json` pointer so GitHub Pages can render the newest static analysis without a backend server.
+```text
+market + ticker
+```
 
-## Output Paths
+Examples:
+
+```text
+TSE 7013
+KRX 012450
+NYSE LMT
+NASDAQ NVDA
+XETRA RHM
+```
+
+The output must be static HTML/CSS/JavaScript/JSON that can run on GitHub Pages without a backend server. The page must load `latest.json`, then load the timestamped raw data JSON referenced by it.
+
+## Input Contract
+
+The updater must accept an input object similar to:
+
+```json
+{
+  "market": "TSE",
+  "ticker": "7013",
+  "company_hint": "IHI Corporation",
+  "analysis_date": "2026-05-10",
+  "language_set": ["ko", "en", "ja"],
+  "output_base_dir": "analysis"
+}
+```
+
+Required fields:
+
+- `market`
+- `ticker`
+- `analysis_date`
+- `output_base_dir`
+
+Optional fields:
+
+- `company_hint`
+- `language_set`
+- `peer_hints`
+- `segment_hints`
+- `source_hints`
+- `force_refresh`
+
+## Market And Ticker Normalization Rule
+
+The updater must normalize folder and file names as:
+
+```text
+{MARKET}{TICKER}
+```
+
+Rules:
+
+- Uppercase the market code.
+- Preserve leading zeros in tickers.
+- Remove spaces and separators from the folder/file key.
+- Do not add exchange suffixes to folder names.
+- Keep exchange suffixes only inside JSON data when useful for market-data lookup.
+
+Examples:
+
+- `TSE 7013` -> `TSE7013`
+- `KRX 012450` -> `KRX012450`
+- `NYSE LMT` -> `NYSELMT`
+- `NASDAQ NVDA` -> `NASDAQNVDA`
+- `XETRA RHM` -> `XETR RHM` is invalid; use `XETRA RHM` -> `XETRARHM`
+
+## Output Path Rule
 
 The updater must write files under:
 
-- `analysis/TSE7013/raw_data/{YYYYMMDD_HHMMSS_KST}.json`
-- `analysis/TSE7013/latest.json`
+```text
+analysis/{MARKET}{TICKER}/
+```
 
-`latest.json` must contain only a pointer to the newest raw data file:
+Required output structure:
+
+```text
+analysis/
+└─ {MARKET}{TICKER}/
+   ├─ {MARKET}{TICKER}.html
+   ├─ {MARKET}{TICKER}.css
+   ├─ {MARKET}{TICKER}.js
+   ├─ latest.json
+   └─ raw_data/
+      └─ {YYYYMMDD_HHMMSS_KST}.json
+```
+
+Examples:
+
+```text
+analysis/TSE7013/TSE7013.html
+analysis/KRX012450/KRX012450.html
+analysis/NYSELMT/NYSELMT.html
+```
+
+`latest.json` must contain only the newest raw-data pointer:
 
 ```json
 {
@@ -23,71 +114,141 @@ The updater must write files under:
 }
 ```
 
+## GitHub Pages URL Rule
+
+The final page must be reachable as:
+
+```text
+https://HyangDan2.github.io/analysis/{MARKET}{TICKER}/{MARKET}{TICKER}.html
+```
+
+Examples:
+
+```text
+https://HyangDan2.github.io/analysis/TSE7013/TSE7013.html
+https://HyangDan2.github.io/analysis/KRX012450/KRX012450.html
+https://HyangDan2.github.io/analysis/NYSELMT/NYSELMT.html
+```
+
 ## Language Rule
 
-The page supports three languages through top-level buttons:
-
-- `KOR`
-- `ENG`
-- `JPN`
-
-Every generated human-readable analysis field must provide all three language values using these keys:
+Default language set:
 
 - `ko`
 - `en`
 - `ja`
 
-The updater must not emit only Korean text. If a section cannot be translated confidently, it must still provide a short neutral version in all three languages and mark the limitation in `data_quality.notes`.
+Every generated user-facing analysis field must provide all requested languages.
 
-## Target Identity Rule
+Standard multilingual object:
 
-The updater must always verify the target identity before generating analysis:
+```json
+{
+  "ko": "...",
+  "en": "...",
+  "ja": "..."
+}
+```
 
-- TSE `7013` = IHI Corporation
-- TSE `7011` = Mitsubishi Heavy Industries
-- TSE `7012` = Kawasaki Heavy Industries
+If a translation cannot be generated confidently, the updater must still provide a short neutral version and record the limitation in `data_quality.notes`.
 
-If these identities cannot be verified from a trusted source, the updater must stop and mark the run as failed.
+The UI language buttons should use:
 
-## Required JSON Sections
+- `KOR`
+- `ENG`
+- `JPN`
+
+For future expansion, the updater may support local-language sets, but `ko/en/ja` is the baseline for this project.
+
+## Target Identity Verification Rule
+
+Before generating analysis, the updater must verify the target identity from trusted sources.
+
+Required identity fields:
+
+- company name
+- market
+- ticker
+- exchange
+- currency
+- sector or industry
+- official company website or IR page, when available
+
+If `company_hint` conflicts with verified identity, the updater must stop or write a clear failure report. Do not silently proceed with a mismatched company.
+
+Examples:
+
+- `TSE 7013` must verify as IHI Corporation.
+- `TSE 7011` must verify as Mitsubishi Heavy Industries.
+- `KRX 012450` must verify as Hanwha Aerospace.
+- `NYSE LMT` must verify as Lockheed Martin.
+
+## Market-Specific Source Rule
+
+Use market-appropriate primary sources first.
+
+TSE / Japan:
+
+- Company IR
+- JPX
+- TDnet
+- Kabutan or other auditable market-data pages
+- Japanese reputable news sources
+
+KRX / Korea:
+
+- Company IR
+- DART
+- KRX
+- Naver Finance / FnGuide / other auditable market-data pages
+- Korean reputable news sources
+
+NYSE / NASDAQ / US:
+
+- Company IR
+- SEC filings
+- Earnings releases and transcripts
+- Exchange or auditable market-data pages
+- Reputable financial news sources
+
+Europe:
+
+- Company IR
+- Exchange pages such as Xetra, LSE, Euronext, Borsa Italiana
+- Regulatory filings
+- Reputable regional and global news sources
+
+## Required JSON Schema
 
 Each raw data JSON must include:
 
-- `schema_version`
-- `generated_at`
-- `as_of`
-- `target`
-- `price_snapshot`
-- `recent_prices`
-- `monthly_prices`
-- `financials`
-- `segment_sector_map`
-- `peer_group`
-- `news_events`
-- `technical_view`
-- `trading_scenarios`
-- `sources`
-- `disclaimer`
+```json
+{
+  "schema_version": "1.1.0",
+  "generated_at": "...",
+  "input": {},
+  "identity": {},
+  "as_of": {},
+  "price_snapshot": {},
+  "recent_prices": [],
+  "monthly_prices": [],
+  "financials": {},
+  "business_segment_map": [],
+  "peer_group": [],
+  "news_events": [],
+  "technical_view": {},
+  "trading_scenarios": {},
+  "sources": [],
+  "data_quality": {},
+  "disclaimer": {}
+}
+```
 
-Optional future sections:
+Backward compatibility:
 
-- `data_quality`
-- `fx_rates`
-- `sector_indices`
-- `ai_generated_summary`
-- `event_study`
-
-## Source Priority
-
-Use sources in this priority order:
-
-1. Company IR pages and official financial statements
-2. Exchange or official disclosure systems
-3. Established market data pages
-4. Reputable news organizations
-5. Secondary finance aggregators
-
-For IHI financials, prefer IHI IR documents. For price data, use an auditable public source and record the exact source URL.
+- Existing pages may use `target` instead of `identity`.
+- Existing pages may use `segment_sector_map` instead of `business_segment_map`.
+- New updaters should prefer `identity` and `business_segment_map`, but may emit aliases if the current page renderer requires them.
 
 ## Date Rule
 
@@ -96,13 +257,16 @@ The updater must distinguish:
 - `generated_at`: when the JSON was generated
 - `as_of.page_date`: the analysis date
 - `as_of.market_data_date`: the latest market close used
+- `timezone`: normally `Asia/Seoul` for this project
 
-If the page date falls on a weekend or market holiday, use the latest confirmed trading day and state that explicitly in `as_of.note.ko/en/ja`.
+If the analysis date falls on a weekend or market holiday, use the latest confirmed trading day and explain this in all requested languages.
 
 ## Price Data Rule
 
 `price_snapshot` must include:
 
+- source
+- date
 - open
 - high
 - low
@@ -110,19 +274,22 @@ If the page date falls on a weekend or market holiday, use the latest confirmed 
 - change
 - change_percent
 - volume
-- source
-- date
+- currency
 
-`recent_prices` should include enough OHLCV points to draw a useful recent chart. If complete daily history is unavailable, the updater may include the latest verified sample and must record the limitation in `data_quality.notes`.
+`recent_prices` should include enough OHLCV rows to draw a useful chart. Prefer at least 60 trading days when available.
+
+`monthly_prices` should include at least 12 months when available.
+
+If complete price history is unavailable, the updater must record the limitation in `data_quality.notes`.
 
 ## Financial Rule
 
-The updater must extract:
+The updater must extract, estimate, or clearly mark unavailable:
 
 - revenue
 - operating profit
 - profit before tax
-- profit attributable to owners
+- net income or profit attributable to owners
 - EPS
 - BPS
 - PER
@@ -130,115 +297,126 @@ The updater must extract:
 - ROE
 - operating margin
 - debt ratio
+- equity ratio
 - total assets
 - total equity
-- equity ratio
 - cash flow from operations
-- next-year company forecast, if available
+- dividend, if relevant
+- next-year guidance, if available
 
-All units must be explicit. For IHI, use `JPY millions` for official financial statement values unless the source uses another unit.
+All units must be explicit.
 
-The financial analysis text must be generated as three short paragraphs in each language:
+The financial analysis text must be generated as three short paragraphs in each requested language:
 
 1. earnings quality and forecast momentum
 2. valuation using PER, PBR, EPS, and BPS
-3. balance-sheet risk using equity ratio, debt ratio, cash flow, and order conversion
+3. balance-sheet risk using equity ratio, debt ratio, cash flow, and order or revenue conversion
 
-## Peer Group Rule
+## Business Segment Map Rule
 
-The default peer group must include:
+The updater must generate a business segment map based on the actual company, not a fixed template.
 
-- IHI Corporation `7013.T`
-- Mitsubishi Heavy Industries `7011.T`
-- Kawasaki Heavy Industries `7012.T`
-- Lockheed Martin `LMT`
-- Hanwha Aerospace `012450.KS`
-- Rheinmetall `RHM.DE`
-
-The updater may add RTX, Northrop Grumman, BAE Systems, Thales, Leonardo, LIG Nex1, Hyundai Rotem, or Komatsu when the analysis objective requires broader comparison.
-
-Each peer must include a rich `one_year_context` field. This field must be written as three short paragraphs in `ko/en/ja` when multilingual peer analysis is supported, or as three English paragraphs if the current schema remains single-string. The three paragraphs should cover:
-
-1. business role and why the peer matters to IHI
-2. valuation or earnings comparison
-3. read-through to IHI's share price or sector narrative
-
-## Segment Sector Map Rule
-
-The updater must generate `segment_sector_map` to avoid treating IHI as a pure defense stock. IHI should be analyzed as a multi-segment heavy-industry company.
-
-Each `segment_sector_map` item must include:
+Each item must include:
 
 - `segment_id`
 - `segment_name.ko/en/ja`
-- `ihi_relevance`
-- `ihi_linkage.ko/en/ja`
+- `company_relevance`
+- `segment_linkage.ko/en/ja`
 - `tickers`
 - `drivers`
 - `risk_factors`
 - `price_linkage.ko/en/ja`
 
-Allowed `ihi_relevance` values:
+Allowed `company_relevance` values:
 
 - `direct`
 - `direct_adjacent`
 - `adjacent`
 - `comparison`
 
-The default segment map must include:
+The segment analysis must be written as approximately three paragraphs:
 
-- Defense / Space
-- Aero Engines / Aviation Components
-- Energy / Nuclear / SMR
-- Industrial Machinery / Turbomachinery
-- Infrastructure / Mobility Systems
-- Maritime / Shipbuilding / Special Vessels
-
-Default ticker candidates by segment:
-
-- Defense / Space: `7013.T`, `7011.T`, `7012.T`, `LMT`, `RTX`, `NOC`, `RHM.DE`, `BA.L`, `HO.PA`, `012450.KS`
-- Aero Engines / Aviation Components: `7013.T`, `RTX`, `GE`, `SAF.PA`, `RR.L`, `MTX.DE`, `7012.T`, `012450.KS`
-- Energy / Nuclear / SMR: `7013.T`, `7011.T`, `6501.T`, `ENR.DE`, `GEV`, `034020.KS`, `BWXT`, `CCJ`
-- Industrial Machinery / Turbomachinery: `7013.T`, `7011.T`, `7012.T`, `6361.T`, `6301.T`, `6501.T`, `SIE.DE`, `CAT`
-- Infrastructure / Mobility Systems: `7013.T`, `7012.T`, `6501.T`, `6503.T`, `SIE.DE`, `ALO.PA`, `064350.KS`
-- Maritime / Shipbuilding / Special Vessels: `7011.T`, `7012.T`, `329180.KS`, `042660.KS`, `010140.KS`, `BA.L`, `LDO.MI`
-
-The updater must explain whether each segment is a direct IHI catalyst, an adjacent macro/industrial comparison, or only a reference sector. This distinction is important because defense news, aero-engine cost news, nuclear/SMR news, and shipbuilding news do not affect IHI with the same intensity.
-
-For every segment, `ihi_linkage.ko/en/ja` must be written as approximately three paragraphs:
-
-1. IHI business exposure and strategic relevance
+1. company business exposure and strategic relevance
 2. global peer set and macro/industry drivers
-3. how that segment links to IHI's stock price, including whether the link is direct or indirect
+3. how that segment links to the target stock price, including whether the link is direct or indirect
 
-## News and Price Linkage Rule
+For backward compatibility with current TSE7013 pages, the updater may also emit:
 
-Every `news_events` item must include:
+- `segment_sector_map`
+- `ihi_relevance`
+- `ihi_linkage`
+
+But new generic pages should use `business_segment_map`, `company_relevance`, and `segment_linkage`.
+
+## Peer Group Rule
+
+The updater must build peers from three layers:
+
+1. same-market peers
+2. global sector peers
+3. business-segment peers
+
+Each peer should include:
+
+- company
+- ticker
+- market or exchange
+- region
+- currency
+- price
+- market cap
+- PER
+- PBR, if available
+- ROE, if available
+- revenue or sales, if available
+- short multilingual peer analysis
+
+Each peer analysis must be approximately three paragraphs:
+
+1. business role and why the peer matters to the target company
+2. valuation or earnings comparison
+3. read-through to the target stock price or sector narrative
+
+Do not hard-code IHI peers for unrelated companies. Use IHI/MHI/Kawasaki only when analyzing Japanese heavy industry or when they are genuinely relevant.
+
+## News And Price Linkage Rule
+
+`news_events` should include 8 to 12 items by default, unless the target has limited public news flow.
+
+Every news item must include:
 
 - date
 - title
 - source
+- URL, when available
 - related tickers
 - sentiment
 - impact horizon
-- price linkage
+- observed price reaction, if available
 - multilingual interpretation
 
-The updater must classify news as:
+Allowed sentiment values:
 
 - `positive`
 - `mixed`
 - `negative`
 - `neutral`
 
+Allowed impact horizons:
+
+- `short`
+- `medium`
+- `long`
+
 The price linkage must explain whether the event is:
 
 - already priced in
 - a new catalyst
 - an execution-risk warning
+- a one-off accounting item
 - a long-term structural support
 
-When possible, connect event dates to nearby price movement. If exact event-study data is unavailable, say so plainly.
+When possible, connect event dates to nearby 1-day, 5-day, and 20-day price movement. If exact event-study data is unavailable, say so plainly.
 
 ## Technical Analysis Rule
 
@@ -248,13 +426,11 @@ The updater must compute or infer:
 - resistance zones
 - trend state
 - risk state
-
-Preferred indicators:
-
 - 5-day moving average
 - 20-day moving average
 - 60-day moving average
-- RSI
+- 120-day moving average, if enough data exists
+- RSI, if enough data exists
 - volume expansion or contraction
 
 If full calculation data is not available, the updater must use observed price zones and label the result as chart-structure analysis rather than indicator calculation.
@@ -262,10 +438,10 @@ If full calculation data is not available, the updater must use observed price z
 `technical_view.trend_state.ko/en/ja` must be written as approximately three paragraphs:
 
 1. current trend structure and recent price movement
-2. support, resistance, and breakout/invalidation zones
+2. support, resistance, breakout, and invalidation zones
 3. volume, momentum, and confirmation conditions
 
-`technical_view.risk_state.ko/en/ja` may be shorter, but must clearly state the invalidation price zone and the next upside confirmation zone.
+`technical_view.risk_state.ko/en/ja` may be shorter, but must clearly state the invalidation price zone and next upside confirmation zone.
 
 ## Trading Scenario Rule
 
@@ -277,17 +453,32 @@ The updater must produce three scenarios:
 
 Each scenario must include:
 
+- setup
 - entry or observation condition
+- confirmation condition
 - invalidation or risk condition
 - fundamental or technical basis
 
-Never present scenarios as guaranteed outcomes. Use research wording, not instruction wording.
-
-Each scenario body must be written as approximately three paragraphs:
+Each scenario body must be approximately three paragraphs:
 
 1. main setup and price or fundamental trigger
 2. execution approach, such as staged entry, confirmation, or position reduction
 3. risk condition and invalidation logic
+
+Never present scenarios as guaranteed outcomes. Use research wording, not instruction wording.
+
+## Static Page Rendering Rule
+
+The generated HTML page should:
+
+- load `latest.json`
+- load the referenced raw JSON
+- support language switching
+- render chart, financials, segment map, peers, news, technical view, trading scenarios, sources, and disclaimer
+- show a clear error message if opened through `file://`
+- degrade gracefully if a CDN chart library fails
+
+No private API key may be embedded in client-side JavaScript.
 
 ## GitHub Pages Rule
 
@@ -299,7 +490,7 @@ Allowed:
 - static CSS
 - static JavaScript
 - static JSON
-- external CDN libraries, if the page already depends on them or explicitly allows them
+- public CDN libraries
 
 Not allowed:
 
@@ -308,46 +499,87 @@ Not allowed:
 - runtime database writes from the page
 - paid API calls directly from public client code
 
-## Failure Handling
+## Data Quality Rule
+
+The updater must include `data_quality` with:
+
+- `status`: `complete`, `partial`, or `failed`
+- `missing_fields`
+- `stale_fields`
+- `notes`
+- `source_confidence`
 
 If a required data source is unavailable:
 
 1. Keep the previous valid `latest.json` unchanged.
-2. Write a failed-run log only if a logging location exists.
-3. Do not overwrite a valid raw data file with partial data.
-4. Report missing fields in `data_quality.notes` when partial generation is explicitly allowed.
+2. Do not overwrite a valid raw data file with partial data unless explicitly allowed.
+3. Write limitations into `data_quality.notes`.
+4. Prefer partial output only when the page can clearly show what is missing.
 
 ## Auditability Rule
 
-Every numeric or factual claim should map to at least one item in `sources`.
+Every numeric or factual claim should map to at least one source item.
 
-The updater must preserve:
+Each source item should include:
 
-- source title
-- source URL
+- title
+- URL
+- publisher or owner
 - usage purpose
 - data date, when known
+- access date or generated date
 
-## Things the Updater Must Not Do
+## Things The Updater Must Not Do
 
-- It must not confuse IHI `7013` with Mitsubishi Heavy Industries `7011`.
+- It must not confuse tickers or companies.
+- It must not drop leading zeros in tickers such as KRX `012450`.
 - It must not fabricate prices, earnings, or source names.
 - It must not overwrite historical raw data files.
 - It must not expose private API keys.
-- It must not remove old raw data unless explicitly requested by the user.
-- It must not output only one language for user-facing analysis.
+- It must not remove old raw data unless explicitly requested.
+- It must not output only one language for user-facing analysis when the requested language set has multiple languages.
+- It must not use a fixed peer list for every company.
+- It must not treat all news as direct catalysts.
 
 ## Recommended Run Order
 
-1. Verify target identity.
-2. Fetch latest market date and price snapshot.
-3. Fetch recent chart data.
-4. Fetch latest official financials.
-5. Build the business segment sector map.
-6. Fetch peer valuation snapshots.
-7. Fetch recent global defense/aerospace and adjacent-sector news.
-8. Generate multilingual analysis.
-9. Validate JSON schema.
-10. Write timestamped raw data.
-11. Update `latest.json`.
-12. Optionally commit the generated files.
+1. Normalize `market + ticker`.
+2. Build `{MARKET}{TICKER}` output paths.
+3. Verify target identity.
+4. Fetch latest market date and price snapshot.
+5. Fetch recent chart data.
+6. Fetch latest official financials.
+7. Build the business segment map.
+8. Build same-market, global, and segment peer groups.
+9. Fetch recent company, sector, and macro news.
+10. Link news to price movement where possible.
+11. Generate multilingual financial, segment, peer, technical, and scenario analysis.
+12. Validate JSON schema.
+13. Write timestamped raw data.
+14. Update `latest.json` only after successful validation.
+15. Optionally update or generate the static HTML/CSS/JS page.
+16. Optionally commit and push.
+
+## Backward Compatibility Notes
+
+The existing page:
+
+```text
+analysis/TSE7013/TSE7013.html
+```
+
+may continue to use:
+
+- `target`
+- `segment_sector_map`
+- `ihi_relevance`
+- `ihi_linkage`
+
+New generic pages should prefer:
+
+- `identity`
+- `business_segment_map`
+- `company_relevance`
+- `segment_linkage`
+
+The updater may emit both old and new keys during a transition period.
